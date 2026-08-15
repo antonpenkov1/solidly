@@ -207,8 +207,44 @@ def sheet(images, tile, gap, label_h, bg, path):
     print("wrote", path)
 
 
+def launch_mark():
+    """The mark for the launch screen, on transparency.
+
+    It sits on the oat `LaunchBackground`, so it is drawn in sage and deep sage — the
+    cream spoon that shipped first was the same colour as the background it sat on, which
+    is exactly the bug that sent the icon back to the drawing board.
+    """
+    W = SIZE * SS
+    img = Image.new("RGBA", (W, W), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    cx, cy = W // 2, int(W * 0.56)
+    r = int(W * 0.34)
+    d.pieslice([cx - r, cy - r, cx + r, cy + r], 0, 180, fill=SAGE)
+    rim_w, rim_h = int(W * 0.78), int(W * 0.062)
+    d.rounded_rectangle([cx - rim_w // 2, cy - rim_h // 2, cx + rim_w // 2, cy + rim_h // 2],
+                        radius=rim_h // 2, fill=SAGE_DEEP)
+    spoon(d, W, (cx + int(r * 1.00), cy - int(r * 1.24)),
+          (cx + int(r * 0.30), cy - int(r * 0.10)),
+          int(W * 0.044), int(W * 0.076), SAGE_DEEP)
+    return img
+
+
+def write_launch_mark():
+    target = ROOT / "Tummi" / "Assets.xcassets" / "LaunchMark.imageset"
+    mark = launch_mark()
+    base = 180
+    for scale, suffix in [(1, ""), (2, "@2x"), (3, "@3x")]:
+        path = target / f"launch-mark{suffix}.png"
+        mark.resize((base * scale, base * scale), Image.LANCZOS).save(path)
+        print("wrote", path.name)
+
+
 def main() -> int:
     DRAFTS.mkdir(exist_ok=True)
+
+    if len(sys.argv) > 1 and sys.argv[1] == "--launch":
+        write_launch_mark()
+        return 0
 
     if len(sys.argv) > 2 and sys.argv[1] == "--install":
         wanted = sys.argv[2].upper()
@@ -218,6 +254,7 @@ def main() -> int:
                 target = ROOT / "Tummi" / "Assets.xcassets" / "AppIcon.appiconset" / "icon-1024.png"
                 img.save(target)
                 print(f"installed variant {letter} ({name}) → {target}")
+                write_launch_mark()
                 return 0
         raise SystemExit(f"unknown variant '{wanted}'")
 
