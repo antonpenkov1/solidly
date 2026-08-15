@@ -94,7 +94,10 @@ Tools/
   generate_who.py     regenerates WHOStandards.swift from the WHO xlsx tables
   build_xcstrings.py  rebuilds Localizable.xcstrings from exported strings + the Russian map
   screenshots.py      captures the App Store set on the 6.9" simulator, both locales
-  make_icon.py        draws the app icon
+  make_glass_icon.py  builds AppIcon.icon — the shipping Liquid Glass icon
+  make_icons.py       flat silhouette drafts, and the launch-screen mark (--launch)
+AppIcon.icon/       the shipping icon: icon.json + Assets/Bowl.png + Assets/Spoon.png
+IconDrafts/         flat candidates and the two contact sheets, for comparison only
 docs/privacy.html   the privacy policy, ready for GitHub Pages
 AppStore/           metadata.md (EN + RU listing, review notes) and screenshots/
 ```
