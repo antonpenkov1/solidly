@@ -1,0 +1,34 @@
+{
+  "fill" : {
+    "automatic-gradient" : "display-p3:0.17255,0.35294,0.27451,1.0"
+  },
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "image-name" : "Spoon.png",
+          "name" : "Spoon"
+        },
+        {
+          "image-name" : "Bowl.png",
+          "name" : "Bowl"
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "specular" : true,
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}

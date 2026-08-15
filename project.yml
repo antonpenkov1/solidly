@@ -27,6 +27,9 @@ targets:
     platform: iOS
     sources:
       - Tummi
+      # Liquid Glass icon (iOS 26+). The icon compiler also derives the legacy flat sizes
+      # from these layers, so AppIcon.appiconset is gone rather than duplicated.
+      - path: AppIcon.icon
     dependencies:
       - target: TummiWidget
     info:

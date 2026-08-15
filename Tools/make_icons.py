@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Draws candidate app icons and a contact sheet at real home-screen size.
+"""Draws FLAT candidate app icons and a contact sheet at real home-screen size.
+
+Superseded for the shipping icon: Tummi now ships a layered Liquid Glass icon built by
+Tools/make_glass_icon.py, because a flat PNG is passed through untouched on iOS 26. This
+script is kept for exploring silhouettes quickly, and because the launch-screen mark is
+still a flat image and is generated here (--launch).
 
     python3 Tools/make_icons.py
 
@@ -252,10 +257,11 @@ def main() -> int:
             if letter == wanted:
                 img, name = fn()
                 target = ROOT / "Tummi" / "Assets.xcassets" / "AppIcon.appiconset" / "icon-1024.png"
-                img.save(target)
-                print(f"installed variant {letter} ({name}) → {target}")
-                write_launch_mark()
-                return 0
+                raise SystemExit(
+                    f"variant {letter} ({name}) is a flat icon, and the app icon is now the "
+                    "layered AppIcon.icon — use:\n"
+                    "    python3 Tools/make_glass_icon.py --install bowl-spoon\n"
+                    "Run this script with --launch to regenerate the launch-screen mark.")
         raise SystemExit(f"unknown variant '{wanted}'")
 
     rendered = []

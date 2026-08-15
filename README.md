@@ -172,6 +172,31 @@ Multi-argument strings therefore use `String(format: String(localized: "%1$@ …
   Reaction logging and out-of-band growth readings both point at real care rather than reassuring.
 - No WHO/AAP/ESPGHAN marks are used. Sources are cited and linked, never branded.
 
+## The app icon
+
+Tummi ships a layered **Liquid Glass** icon (`AppIcon.icon`), not a flat PNG. On iOS 26 a
+baked PNG is passed through untouched and reads as an iOS 18 icon on an iOS 26 home screen;
+the glass material, specular highlight, drop shadow and background gradient only appear if
+the system is handed layers plus a fill. It then derives the light, dark and tinted 1024s
+itself, and generates the legacy 60/76pt sizes, so the iOS 17 deployment target still gets a
+proper icon with no `AppIcon.appiconset` in the catalogue.
+
+```sh
+python3 Tools/make_glass_icon.py --list
+python3 Tools/make_glass_icon.py --install bowl-spoon
+```
+
+Two things worth knowing if you touch it:
+
+- Layers must draw **no** highlight, bevel or shadow of their own. They are flat cream
+  silhouettes on transparency; anything three-dimensional fights the system compositor.
+- `automatic-gradient` needs a **four**-component colour. Three fails the build with
+  `Expected four comma separated color components`, and the surrounding actool crash
+  (`attempt to insert nil object`) buries the real message several lines up.
+
+`Tools/make_icons.py` still draws flat silhouettes for quickly comparing shapes at
+home-screen size, and generates the launch-screen mark (`--launch`), which is a flat image.
+
 ## Extensions and system integration
 
 **Widget** (`TummiWidget/`) — small, medium and lock-screen rectangular. It reads a JSON
@@ -200,7 +225,7 @@ Privacy answers and `docs/privacy.html`, which is noted in both places.
 
 ## Not done yet
 
-- App icon is a first pass (`Tools/make_icon.py`); no alternate icons.
+- No alternate app icons.
 - iCloud sync is code-ready but off; the CloudKit container does not exist yet.
 - No Apple Watch app.
 - Sleep tracking is a single start/stop with no analysis; nappy tracking has no trends.
