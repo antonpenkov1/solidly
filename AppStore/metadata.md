@@ -263,9 +263,20 @@ python3 Tools/preflight.py        # must print "Nothing blocking"
 
 Then, in order:
 
-1. **Register the bundle IDs** — developer.apple.com → Identifiers → `com.antonpenkov.tummi`
-   and `com.antonpenkov.tummi.widget`. Enable **App Groups** on both and add
-   `group.com.antonpenkov.tummi`.
+1. **Bundle IDs — already done.** Xcode registered both `com.antonpenkov.tummi` and
+   `com.antonpenkov.tummi.widget` under team 3UHRLQ9522 while archiving, and put
+   `group.com.antonpenkov.tummi` on both. Verify any time with:
+
+   ```sh
+   security cms -D -i ~/Library/Developer/Xcode/UserData/Provisioning\ Profiles/*.mobileprovision \
+     | plutil -p - | grep -A3 application-groups
+   ```
+
+   The widget needs its own identifier because iOS runs an app extension as a separate,
+   separately-signed process. The app group is the shared container between those two
+   sandboxes — the app writes `widget.json` into it and the widget reads it, so the
+   entitlement has to be on both or the widget resolves a nil container and silently shows
+   a placeholder.
 2. **Create the app record** — App Store Connect → Apps → +. Name `Spoonlet`, primary language
    English (U.S.), bundle ID `com.antonpenkov.tummi`, SKU anything (`tummi-1`).
 3. **Upload the build** — Xcode → Window → Organizer → select the archive → Distribute App →
