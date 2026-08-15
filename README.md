@@ -47,6 +47,7 @@ xcodebuild -project Tummi.xcodeproj -scheme Tummi \
 | Argument | Effect |
 | --- | --- |
 | `-DemoSeed 1` | Seeds a 7½-month-old with 3 weeks of feeds, nappies and 8 growth points |
+| `-DemoEmpty 1` | With `-DemoSeed`: creates the child but logs nothing — the real first run |
 | `-DemoReset 1` | Wipes existing children first |
 | `-DemoOverrides 1` | Adds a paediatrician plan (Dr Ivanova) and switches it on |
 | `-OpenTab N` | Opens tab 0–4 (Today, Log, Foods, Plan, Growth) |
@@ -101,6 +102,30 @@ AppStore/           metadata.md (EN + RU listing, review notes) and screenshots/
 Each scene follows Clean Swift: the View owns a `ViewStore: ObservableObject` that conforms to
 the scene's `DisplayLogic`, wired to an Interactor and Presenter in `init`. Interactors see only
 value types; Presenters own all string and colour-semantic decisions.
+
+## Judging the first run
+
+Demo data flatters an app. Every screen looked fine seeded with three weeks of feeds, and every
+one of them was worse empty: Today opened with three zeros under three empty progress bars, which
+reads as three missed targets before the parent has done anything.
+
+`-DemoSeed 1 -DemoEmpty 1` creates the child and stops there. Capture the tabs that way before
+believing any screenshot:
+
+```sh
+for t in 0 1 2 3 4; do
+  xcrun simctl terminate <udid> com.antonpenkov.tummi
+  xcrun simctl launch <udid> com.antonpenkov.tummi -DemoSeed 1 -DemoEmpty 1 -OpenTab $t
+  sleep 3 && xcrun simctl io <udid> screenshot empty-$t.png
+done
+```
+
+What that surfaced, and what now covers it: an onboarding tour page naming the five tabs, a
+dismissible `FirstRunHint` explaining that citation chips are links, `EmptyStateView` carrying its
+own action button instead of pointing at a corner, and a day-empty card on Today that states the
+range rather than scoring the parent against it.
+
+This is still one person's judgement. The honest test is a parent with an actual infant.
 
 ## Data provenance
 
