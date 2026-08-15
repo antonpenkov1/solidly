@@ -1,0 +1,247 @@
+# Tummi — App Store Connect metadata
+
+Everything below is ready to paste. Character limits are noted and respected.
+
+---
+
+## App name (30)
+
+**Tummi** — plus a subtitle, because the name alone says nothing about what the app does.
+
+If `Tummi` is taken, the fallbacks that survived the same brainstorm and are still descriptive:
+`Tummi: Baby Feeding`, `Tummi — First Foods`.
+
+## Subtitle (30)
+
+| Locale | Text | Length |
+| --- | --- | --- |
+| EN | `Baby feeding, with sources` | 26 |
+| RU | `Прикорм со ссылками на науку` | 28 |
+
+## Keywords (100, comma-separated, no spaces after commas)
+
+**EN** (96)
+```
+weaning,solids,baby food,allergen,puree,BLW,feeding,tracker,growth,percentile,infant,first foods
+```
+
+**RU** (90)
+```
+прикорм,ввод продуктов,аллергены,грамм,норма,вес,рост,перцентиль,кормление,дневник,педиатр
+```
+
+Deliberately absent: `WHO`, `AAP`, `ESPGHAN`, `pediatrician approved`. Using an organisation's
+name as a keyword implies endorsement Tummi does not have, and that is a rejection risk as well
+as being untrue.
+
+## Category
+
+Primary: **Medical**. Secondary: **Health & Fitness**.
+
+Medical is the honest primary — the app's whole proposition is summarising clinical guidance.
+It ranks against fewer toys and more of the apps a parent would actually compare it to.
+
+## Promotional text (170, editable without review)
+
+**EN**
+```
+Every recommendation names the guideline or trial behind it. Track grams and millilitres against
+the range for your baby's age — or replace it with your paediatrician's own numbers.
+```
+
+**RU**
+```
+У каждой рекомендации назван источник — гайд или исследование. Считайте граммы и миллилитры
+относительно нормы для возраста или замените её цифрами своего педиатра.
+```
+
+## Description
+
+### EN
+
+```
+Tummi is a feeding tracker that shows its work.
+
+Most baby apps do one of two things. Some explain what to introduce and how to cut it safely,
+but refuse to count anything. Others count millilitres and plot growth curves, but never say a
+word about what to feed or why. Tummi does both, and names its sources for all of it.
+
+WHAT YOU TRACK
+• Feeds in grams and millilitres — breast, bottle, solids and water
+• Growth: weight, length and head circumference on the real WHO Child Growth Standards
+• Sleep and nappies
+• Which foods your baby has tried, and how each one went
+
+WHAT TUMMI TELLS YOU
+• Today's amount against the published range for your baby's exact age, not a generic target
+• How many meals and milk feeds a day the guidance suggests at this stage
+• 148 foods with the age each is usually introduced, allergen status, choking risk, and how to
+  cut and serve it at 6–8 months and again from 9 months — plus 20 things to hold off on, each
+  with the reason and the source behind it
+• Which of the top-9 allergens have been introduced — and, more usefully, which were introduced
+  once and then quietly dropped
+
+EVERY CLAIM CITES ITS SOURCE
+Tap any recommendation and the guideline or study opens: the WHO 2023 complementary feeding
+guideline, the ESPGHAN position paper, the NIAID peanut guidelines, the LEAP and EAT trials,
+AAP guidance on iron and vitamin D, FDA advice on fish. Eighteen sources, listed in full inside
+the app, with a plain-language line on what each one actually establishes.
+
+YOUR PAEDIATRICIAN OVERRIDES ALL OF IT
+Guidance is written for populations; your doctor examined your baby. Enter the amounts and
+introduction ages they gave you and Tummi follows those instead, noting who prescribed them —
+while still showing you what the published range says, so you always see both.
+
+PRIVACY
+No account. No server. No analytics. Everything stays on your device, and nothing is sent
+anywhere unless you export it yourself.
+
+Tummi is not a medical device and does not diagnose. It summarises published guidance so you can
+read it, question it, and take it to the person who can actually examine your child.
+```
+
+### RU
+
+```
+Tummi — дневник кормления, который показывает, откуда он берёт цифры.
+
+Приложения для родителей обычно делают что-то одно. Одни рассказывают, что вводить и как
+безопасно резать, но принципиально ничего не считают. Другие считают миллилитры и рисуют кривые
+роста, но ни слова не говорят о том, чем и почему кормить. Tummi делает и то, и другое — и на
+всё называет источник.
+
+ЧТО ВЫ ЗАПИСЫВАЕТЕ
+• Кормления в граммах и миллилитрах — грудь, бутылочка, прикорм, вода
+• Рост: вес, длину и окружность головы на настоящих кривых ВОЗ
+• Сон и подгузники
+• Какие продукты ребёнок уже пробовал и как всё прошло
+
+ЧТО TUMMI ГОВОРИТ ВАМ
+• Сколько съедено сегодня относительно опубликованного диапазона именно для возраста ребёнка,
+  а не абстрактной нормы
+• Сколько приёмов пищи и молочных кормлений в день рекомендуют на этом этапе
+• 148 продуктов: возраст обычного введения, аллерген, риск подавиться и как резать и подавать
+  в 6–8 месяцев и отдельно с 9 месяцев — плюс 20 позиций «не давать», у каждой указана причина
+  и источник
+• Какие из топ-9 аллергенов уже введены — и, что важнее, какие ввели один раз и незаметно
+  перестали давать
+
+У КАЖДОГО УТВЕРЖДЕНИЯ ЕСТЬ ССЫЛКА
+Нажмите на любую рекомендацию — откроется сам гайд или исследование: рекомендации ВОЗ 2023 по
+прикорму, позиционный документ ESPGHAN, гайдлайны NIAID по арахису, исследования LEAP и EAT,
+рекомендации AAP по железу и витамину D, советы FDA по рыбе. Восемнадцать источников, все
+перечислены внутри приложения, и к каждому — строчка человеческим языком о том, что он
+на самом деле устанавливает.
+
+СЛОВО ВАШЕГО ПЕДИАТРА ВАЖНЕЕ
+Рекомендации пишут для популяций, а вашего ребёнка осматривал ваш врач. Внесите количества и
+возрасты введения, которые назвал он, — Tummi будет следовать им и подписывать, кто их назначил,
+продолжая показывать рядом опубликованный диапазон. Вы всегда видите оба.
+
+ПРИВАТНОСТЬ
+Ни аккаунта, ни сервера, ни аналитики. Всё хранится на вашем устройстве и никуда не уходит,
+пока вы сами не сделаете экспорт.
+
+Tummi — не медицинское изделие и не ставит диагнозов. Оно пересказывает опубликованные
+рекомендации, чтобы вы могли их прочитать, оспорить и принести тому, кто может осмотреть
+вашего ребёнка.
+```
+
+## What's New (1.0)
+
+**EN**: `First release.`
+**RU**: `Первый выпуск.`
+
+## Support & marketing URLs
+
+- Support URL: `https://antonpenkov1.github.io/tummi/`
+- Privacy Policy URL: `https://antonpenkov1.github.io/tummi/privacy.html` (source: `docs/privacy.html`)
+- Marketing URL: leave blank for 1.0.
+
+Enable GitHub Pages on the repo from `main` / `docs` before submitting — a Privacy Policy URL
+that 404s is an automatic rejection.
+
+## App Privacy answers
+
+**Data Not Collected.** Answer "No" to the first question and the section is done.
+
+This is accurate today. If `Persistence.iCloudSyncEnabled` is ever flipped to `true`, these
+answers must change before that build is submitted, and `docs/privacy.html` with them.
+
+## Age rating
+
+Answer the questionnaire honestly:
+
+- **Medical/Treatment Information: Infrequent/Mild.** The app summarises clinical feeding
+  guidance, so "None" is not defensible. This lands the rating at 12+.
+- Everything else: None.
+
+12+ on a parenting app looks odd but it is the correct answer, and mis-answering the
+questionnaire is grounds for removal later. It does not restrict who can download the app.
+
+**Do not** enrol in the Kids Category. The audience is parents, not children; the Kids Category
+brings 5.1.4 obligations that do not apply and cannot be met by an app that shows external links.
+
+## App Review notes
+
+```
+Tummi is an infant-feeding reference and tracker for parents. There is no account, no login and
+no server — the reviewer can use every feature immediately after onboarding.
+
+Regarding Guideline 1.4.1 (medical apps):
+
+• Onboarding requires an explicit acknowledgement, recorded with a timestamp, that Tummi is not a
+  doctor, does not diagnose, and is subordinate to the family's paediatrician. It cannot be
+  skipped.
+• Every recommendation in the app carries a tappable citation to the guideline or peer-reviewed
+  study it comes from. The full source list is in Plan → Sources (book icon, top right). All
+  eighteen sources are public: WHO, ESPGHAN, EFSA, NIAID, AAP, AHA, FDA, NHS and CDC publications,
+  plus the LEAP and EAT randomised trials.
+• Growth percentiles are computed from the published WHO Child Growth Standards (2006) LMS
+  parameters. The app never interprets a reading as a diagnosis; readings outside ±2 SD are
+  phrased as "worth mentioning at your next visit".
+• Allergen and choking guidance is presented with the safety mechanism stated, and hard limits
+  (honey before 12 months, high-mercury fish) cannot be overridden by the user.
+• The app displays no organisation's logo or mark and claims no endorsement.
+
+Regarding privacy: all data is stored in the app's own container via SwiftData. There is no
+networking code in the app other than opening cited sources in Safari via openURL, and the user's
+own export via the share sheet.
+
+Suggested walkthrough: complete onboarding with any date of birth around 7 months ago → Today
+shows amounts against the WHO range → Foods → tap any food to see the citations → Plan → Sources.
+```
+
+## Localisations to enable
+
+English (U.S.) — primary, and Russian. The app ships both; listing only one leaves half the
+metadata untranslated in search.
+
+## Screenshots
+
+Six per locale, 6.9" (1320 × 2868). Generate with:
+
+```sh
+python3 Tools/screenshots.py
+```
+
+Order and captions:
+
+| # | Screen | EN caption | RU caption |
+| --- | --- | --- | --- |
+| 1 | Today | Today's grams against the range for their age | Сегодняшние граммы относительно нормы для возраста |
+| 2 | Food detail | Every recommendation names its source | У каждой рекомендации назван источник |
+| 3 | Foods | 148 foods, allergens and how to cut them | 148 продуктов, аллергены и как резать |
+| 4 | Plan | Your paediatrician's numbers, not ours | Цифры вашего педиатра, а не наши |
+| 5 | Growth | Real WHO curves, read honestly | Настоящие кривые ВОЗ, без интерпретаций |
+| 6 | Sources | Eighteen sources you can read yourself | Восемнадцать источников, которые можно прочитать |
+
+## Pre-submission checklist
+
+- [ ] GitHub Pages live, privacy URL returns 200
+- [ ] `MARKETING_VERSION` and `CURRENT_PROJECT_VERSION` bumped in `project.yml`
+- [ ] Archive built from a clean `xcodegen generate`
+- [ ] Screenshots uploaded for both locales
+- [ ] App Privacy = Data Not Collected
+- [ ] Age rating questionnaire answered as above
+- [ ] Review notes pasted

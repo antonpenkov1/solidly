@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>com.apple.security.application-groups</key>
+	<array>
+		<string>group.com.antonpenkov.tummi</string>
+	</array>
+
+	<!--
+	  iCloud sync is code-ready and switched off. To enable it:
+	    1. Create the CloudKit container iCloud.com.antonpenkov.tummi in the developer account.
+	    2. Uncomment the three keys below.
+	    3. Set Persistence.iCloudSyncEnabled = true.
+	    4. Update the App Privacy answers — data would then leave the device.
+	  Adding the keys before the container exists fails provisioning, so they stay commented.
+
+	<key>com.apple.developer.icloud-container-identifiers</key>
+	<array>
+		<string>iCloud.com.antonpenkov.tummi</string>
+	</array>
+	<key>com.apple.developer.icloud-services</key>
+	<array>
+		<string>CloudKit</string>
+	</array>
+	<key>aps-environment</key>
+	<string>development</string>
+	-->
+</dict>
+</plist>
