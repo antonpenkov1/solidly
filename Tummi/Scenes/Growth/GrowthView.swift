@@ -44,7 +44,7 @@ struct GrowthView: View {
                 EmptyStateView(
                     symbol: "chart.xyaxis.line",
                     title: String(localized: "No measurements yet"),
-                    message: String(localized: "Add a weight or a length and Tummi will plot it against the WHO curves for your baby's age and sex."),
+                    message: String(localized: "Add a weight or a length and Solidly will plot it against the WHO curves for your baby's age and sex."),
                     actionTitle: String(localized: "Add a measurement"),
                     action: { showsAdd = true }
                 )

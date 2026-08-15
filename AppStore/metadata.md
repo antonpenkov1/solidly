@@ -1,4 +1,4 @@
-# Tummi — App Store Connect metadata
+# Solidly — App Store Connect metadata
 
 Everything below is ready to paste. Character limits are noted and respected.
 
@@ -6,10 +6,18 @@ Everything below is ready to paste. Character limits are noted and respected.
 
 ## App name (30)
 
-**Tummi** — plus a subtitle, because the name alone says nothing about what the app does.
+**Solidly**
 
-If `Tummi` is taken, the fallbacks that survived the same brainstorm and are still descriptive:
-`Tummi: Baby Feeding`, `Tummi — First Foods`.
+The first choice, `Solidly`, was rejected by App Store Connect as already in use — and the app
+holding it is [Solidly – Start Solid Foods](https://apps.apple.com/us/app/tummi-start-solid-foods/id6754228611),
+a direct competitor in exactly this category. Suffixing it (`Solidly: Baby Feeding`) would have
+parked the listing next to that competitor, fed it search traffic, and invited a 4.1 copycat
+rejection. So the name changed outright.
+
+`Solidly` carries the category term — *starting solids* — and, read as an adverb, the
+proposition: on firm ground, well-founded. Checked free on the App Store at the time of
+writing; `Portio`, `Gramly`, `Nomly` and `Bibly` were taken, and `FirstBite` already has two
+apps in this exact niche.
 
 ## Subtitle (30)
 
@@ -31,7 +39,7 @@ weaning,solids,baby food,allergen,puree,BLW,feeding,tracker,growth,percentile,in
 ```
 
 Deliberately absent: `WHO`, `AAP`, `ESPGHAN`, `pediatrician approved`. Using an organisation's
-name as a keyword implies endorsement Tummi does not have, and that is a rejection risk as well
+name as a keyword implies endorsement Solidly does not have, and that is a rejection risk as well
 as being untrue.
 
 ## Category
@@ -60,11 +68,11 @@ the range for your baby's age — or replace it with your paediatrician's own nu
 ### EN
 
 ```
-Tummi is a feeding tracker that shows its work.
+Solidly is a feeding tracker that shows its work.
 
 Most baby apps do one of two things. Some explain what to introduce and how to cut it safely,
 but refuse to count anything. Others count millilitres and plot growth curves, but never say a
-word about what to feed or why. Tummi does both, and names its sources for all of it.
+word about what to feed or why. Solidly does both, and names its sources for all of it.
 
 WHAT YOU TRACK
 • Feeds in grams and millilitres — breast, bottle, solids and water
@@ -89,25 +97,25 @@ the app, with a plain-language line on what each one actually establishes.
 
 YOUR PAEDIATRICIAN OVERRIDES ALL OF IT
 Guidance is written for populations; your doctor examined your baby. Enter the amounts and
-introduction ages they gave you and Tummi follows those instead, noting who prescribed them —
+introduction ages they gave you and Solidly follows those instead, noting who prescribed them —
 while still showing you what the published range says, so you always see both.
 
 PRIVACY
 No account. No server. No analytics. Everything stays on your device, and nothing is sent
 anywhere unless you export it yourself.
 
-Tummi is not a medical device and does not diagnose. It summarises published guidance so you can
+Solidly is not a medical device and does not diagnose. It summarises published guidance so you can
 read it, question it, and take it to the person who can actually examine your child.
 ```
 
 ### RU
 
 ```
-Tummi — дневник кормления, который показывает, откуда он берёт цифры.
+Solidly — дневник кормления, который показывает, откуда он берёт цифры.
 
 Приложения для родителей обычно делают что-то одно. Одни рассказывают, что вводить и как
 безопасно резать, но принципиально ничего не считают. Другие считают миллилитры и рисуют кривые
-роста, но ни слова не говорят о том, чем и почему кормить. Tummi делает и то, и другое — и на
+роста, но ни слова не говорят о том, чем и почему кормить. Solidly делает и то, и другое — и на
 всё называет источник.
 
 ЧТО ВЫ ЗАПИСЫВАЕТЕ
@@ -135,14 +143,14 @@ Tummi — дневник кормления, который показывает
 
 СЛОВО ВАШЕГО ПЕДИАТРА ВАЖНЕЕ
 Рекомендации пишут для популяций, а вашего ребёнка осматривал ваш врач. Внесите количества и
-возрасты введения, которые назвал он, — Tummi будет следовать им и подписывать, кто их назначил,
+возрасты введения, которые назвал он, — Solidly будет следовать им и подписывать, кто их назначил,
 продолжая показывать рядом опубликованный диапазон. Вы всегда видите оба.
 
 ПРИВАТНОСТЬ
 Ни аккаунта, ни сервера, ни аналитики. Всё хранится на вашем устройстве и никуда не уходит,
 пока вы сами не сделаете экспорт.
 
-Tummi — не медицинское изделие и не ставит диагнозов. Оно пересказывает опубликованные
+Solidly — не медицинское изделие и не ставит диагнозов. Оно пересказывает опубликованные
 рекомендации, чтобы вы могли их прочитать, оспорить и принести тому, кто может осмотреть
 вашего ребёнка.
 ```
@@ -154,8 +162,8 @@ Tummi — не медицинское изделие и не ставит диа
 
 ## Support & marketing URLs
 
-- Support URL: `https://antonpenkov1.github.io/tummi/`
-- Privacy Policy URL: `https://antonpenkov1.github.io/tummi/privacy.html` (source: `docs/privacy.html`)
+- Support URL: `https://antonpenkov1.github.io/solidly/`
+- Privacy Policy URL: `https://antonpenkov1.github.io/solidly/privacy.html` (source: `docs/privacy.html`)
 - Marketing URL: leave blank for 1.0.
 
 Enable GitHub Pages on the repo from `main` / `docs` before submitting — a Privacy Policy URL
@@ -185,12 +193,12 @@ brings 5.1.4 obligations that do not apply and cannot be met by an app that show
 ## App Review notes
 
 ```
-Tummi is an infant-feeding reference and tracker for parents. There is no account, no login and
+Solidly is an infant-feeding reference and tracker for parents. There is no account, no login and
 no server — the reviewer can use every feature immediately after onboarding.
 
 Regarding Guideline 1.4.1 (medical apps):
 
-• Onboarding requires an explicit acknowledgement, recorded with a timestamp, that Tummi is not a
+• Onboarding requires an explicit acknowledgement, recorded with a timestamp, that Solidly is not a
   doctor, does not diagnose, and is subordinate to the family's paediatrician. It cannot be
   skipped.
 • Every recommendation in the app carries a tappable citation to the guideline or peer-reviewed
@@ -248,8 +256,8 @@ Everything that can be automated is done. What remains needs your Apple ID.
 
 ```sh
 xcodegen generate
-xcodebuild -project Tummi.xcodeproj -scheme Tummi -configuration Release \
-  -destination 'generic/platform=iOS' -archivePath build/Tummi.xcarchive archive
+xcodebuild -project Solidly.xcodeproj -scheme Solidly -configuration Release \
+  -destination 'generic/platform=iOS' -archivePath build/Solidly.xcarchive archive
 python3 Tools/preflight.py        # must print "Nothing blocking"
 ```
 
@@ -258,7 +266,7 @@ Then, in order:
 1. **Register the bundle IDs** — developer.apple.com → Identifiers → `com.antonpenkov.tummi`
    and `com.antonpenkov.tummi.widget`. Enable **App Groups** on both and add
    `group.com.antonpenkov.tummi`.
-2. **Create the app record** — App Store Connect → Apps → +. Name `Tummi`, primary language
+2. **Create the app record** — App Store Connect → Apps → +. Name `Solidly`, primary language
    English (U.S.), bundle ID `com.antonpenkov.tummi`, SKU anything (`tummi-1`).
 3. **Upload the build** — Xcode → Window → Organizer → select the archive → Distribute App →
    App Store Connect → Upload. Xcode creates the distribution certificate and the App Store

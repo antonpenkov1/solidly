@@ -114,7 +114,7 @@ struct TummiWidgetView: View {
             header
             Spacer(minLength: 0)
             if isEmpty {
-                Text("Open Tummi to get started")
+                Text("Open Solidly to get started")
                     .font(WTheme.rounded(12, .medium))
                     .foregroundStyle(WTheme.faint)
             } else {
@@ -170,7 +170,7 @@ struct TummiWidgetView: View {
 
     private var rectangular: some View {
         VStack(alignment: .leading, spacing: 2) {
-            Text(snapshot.childName.isEmpty ? "Tummi" : snapshot.childName)
+            Text(snapshot.childName.isEmpty ? "Solidly" : snapshot.childName)
                 .font(.system(size: 13, weight: .semibold))
             Text(amount(snapshot.solidGrams, metric: snapshot.usesMetric, gram: true)
                  + " · " + "\(snapshot.meals)/\(snapshot.mealTargetHigh)")
@@ -188,7 +188,7 @@ struct TummiWidgetView: View {
 
     private var header: some View {
         VStack(alignment: .leading, spacing: 1) {
-            Text(snapshot.childName.isEmpty ? "Tummi" : snapshot.childName)
+            Text(snapshot.childName.isEmpty ? "Solidly" : snapshot.childName)
                 .font(WTheme.rounded(14, .bold))
                 .foregroundStyle(WTheme.ink)
                 .lineLimit(1)

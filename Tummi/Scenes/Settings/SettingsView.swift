@@ -122,7 +122,7 @@ struct SettingsView: View {
     private var remindersCard: some View {
         VStack(alignment: .leading, spacing: 12) {
             SectionLabel("Reminders")
-            Text("Three reminders, and nothing else. Tummi will never nag you about feeds — you already know when your baby is hungry.")
+            Text("Three reminders, and nothing else. Solidly will never nag you about feeds — you already know when your baby is hungry.")
                 .font(.system(size: 13))
                 .foregroundStyle(Theme.secondary)
 
@@ -145,7 +145,7 @@ struct SettingsView: View {
             )
 
             if permissionDenied {
-                Text("Notifications are turned off for Tummi in iOS Settings, so these will not appear.")
+                Text("Notifications are turned off for Solidly in iOS Settings, so these will not appear.")
                     .font(.system(size: 12, weight: .medium))
                     .foregroundStyle(Theme.clay)
             }
@@ -201,7 +201,7 @@ struct SettingsView: View {
     private var dataCard: some View {
         VStack(alignment: .leading, spacing: 12) {
             SectionLabel("Your data")
-            Text("Tummi has no account and no server. Everything lives in this app's storage on this device, and nothing is sent anywhere unless you export it yourself.")
+            Text("Solidly has no account and no server. Everything lives in this app's storage on this device, and nothing is sent anywhere unless you export it yourself.")
                 .font(.system(size: 13))
                 .foregroundStyle(Theme.secondary)
             Button(action: export) {
@@ -227,7 +227,7 @@ struct SettingsView: View {
         } label: {
             HStack {
                 Image(systemName: "text.book.closed")
-                Text("Every source Tummi uses")
+                Text("Every source Solidly uses")
                     .font(Theme.rounded(15, .semibold))
                 Spacer()
                 Image(systemName: "chevron.right").font(.system(size: 12, weight: .semibold))
@@ -243,7 +243,7 @@ struct SettingsView: View {
     private var disclaimerCard: some View {
         VStack(alignment: .leading, spacing: 8) {
             SectionLabel("Important")
-            Text("Tummi summarises published infant feeding guidance. It is not a medical device, it does not diagnose, and it cannot examine your baby. Always check with your paediatrician before making decisions about feeding, supplements or allergen introduction — and seek urgent care for breathing difficulty, facial swelling, repeated vomiting after a food, or a baby who stops feeding.")
+            Text("Solidly summarises published infant feeding guidance. It is not a medical device, it does not diagnose, and it cannot examine your baby. Always check with your paediatrician before making decisions about feeding, supplements or allergen introduction — and seek urgent care for breathing difficulty, facial swelling, repeated vomiting after a food, or a baby who stops feeding.")
                 .font(.system(size: 13))
                 .foregroundStyle(Theme.secondary)
                 .fixedSize(horizontal: false, vertical: true)

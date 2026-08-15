@@ -123,7 +123,7 @@ enum Reminders {
         let content = UNMutableNotificationContent()
         content.title = String(localized: "Time for a weigh-in")
         content.body = last == nil
-            ? String(localized: "A single measurement is just a number. Add one and Tummi can start showing the curve.")
+            ? String(localized: "A single measurement is just a number. Add one and Solidly can start showing the curve.")
             : String(localized: "It has been a while since the last measurement. One more point keeps the curve honest.")
         content.sound = .default
 

@@ -73,7 +73,7 @@ struct OnboardingView: View {
     private var welcome: some View {
         VStack(alignment: .leading, spacing: 20) {
             Spacer()
-            Text("Tummi")
+            Text("Solidly")
                 .font(Theme.serif(46, .semibold))
                 .foregroundStyle(Theme.ink)
             Text("Feeding your baby, with the reasoning attached.")
@@ -142,7 +142,7 @@ struct OnboardingView: View {
                             Text("\(gestationWeeks) weeks at birth")
                                 .font(Theme.rounded(15, .regular))
                         }
-                        Text("Tummi will use corrected age for feeding milestones and growth charts, which is how they are meant to be read for preterm babies.")
+                        Text("Solidly will use corrected age for feeding milestones and growth charts, which is how they are meant to be read for preterm babies.")
                             .font(.system(size: 13))
                             .foregroundStyle(Theme.faint)
                     }
@@ -172,7 +172,7 @@ struct OnboardingView: View {
     private var tour: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 18) {
-                Text("How Tummi works")
+                Text("How Solidly works")
                     .font(Theme.serif(32, .semibold))
                     .foregroundStyle(Theme.ink)
                 Text("Five screens. You will mostly live on the first one.")
@@ -205,7 +205,7 @@ struct OnboardingView: View {
                         Text("The green chips are links")
                             .font(Theme.rounded(15, .semibold))
                             .foregroundStyle(Theme.ink)
-                        Text("Under every recommendation you will see something like “WHO, 2023”. Tap it and the actual guideline opens. Nothing in Tummi asks you to take its word for it.")
+                        Text("Under every recommendation you will see something like “WHO, 2023”. Tap it and the actual guideline opens. Nothing in Solidly asks you to take its word for it.")
                             .font(.system(size: 13))
                             .foregroundStyle(Theme.secondary)
                             .fixedSize(horizontal: false, vertical: true)
@@ -253,7 +253,7 @@ struct OnboardingView: View {
                 VStack(alignment: .leading, spacing: 14) {
                     disclaimerRow(
                         "stethoscope",
-                        String(localized: "Tummi is not a doctor"),
+                        String(localized: "Solidly is not a doctor"),
                         String(localized: "It summarises published guidance. It does not diagnose anything, and it cannot see your baby. Your paediatrician's advice takes priority over everything shown here — and you can enter their numbers so the app follows them instead.")
                     )
                     disclaimerRow(
@@ -269,7 +269,7 @@ struct OnboardingView: View {
                     disclaimerRow(
                         "lock",
                         String(localized: "Your data stays here"),
-                        String(localized: "Everything is stored on this device. Tummi has no account, no server and no analytics.")
+                        String(localized: "Everything is stored on this device. Solidly has no account, no server and no analytics.")
                     )
                 }
 

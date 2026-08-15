@@ -60,7 +60,7 @@ struct FoodDetailView: View {
         .sheet(isPresented: $showsOverride) {
             OverrideSheet(
                 title: String(localized: "When may we start \(food.name.text)?"),
-                explanation: String(localized: "If your paediatrician gave you a different age, put it here. Tummi will use your date and still show you what the published guidance says."),
+                explanation: String(localized: "If your paediatrician gave you a different age, put it here. Solidly will use your date and still show you what the published guidance says."),
                 unitLabel: String(localized: "months"),
                 initialValue: Double(food.earliestMonth),
                 onSave: { month, attribution in
