@@ -81,7 +81,7 @@ struct PlanView: View {
         .sheet(item: $editingTarget) { row in
             OverrideSheet(
                 title: row.title,
-                explanation: String(localized: "Enter the number your paediatrician gave you. Solidly will use it as the plan and keep showing the published range alongside, so you always know both."),
+                explanation: String(localized: "Enter the number your paediatrician gave you. Spoonlet will use it as the plan and keep showing the published range alongside, so you always know both."),
                 unitLabel: unitLabel(row),
                 initialValue: 0,
                 onSave: { value, attribution in
@@ -215,7 +215,7 @@ struct PlanView: View {
         Button { showsEvidenceLibrary = true } label: {
             HStack {
                 Image(systemName: "text.book.closed")
-                Text("Every source Solidly uses")
+                Text("Every source Spoonlet uses")
                     .font(Theme.rounded(15, .semibold))
                 Spacer()
                 Image(systemName: "chevron.right").font(.system(size: 12, weight: .semibold))
@@ -257,7 +257,7 @@ struct EvidenceLibraryView: View {
             Theme.bg.ignoresSafeArea()
             ScrollView {
                 VStack(alignment: .leading, spacing: 14) {
-                    Text("Solidly does not have opinions of its own. Everything it says traces to one of these.")
+                    Text("Spoonlet does not have opinions of its own. Everything it says traces to one of these.")
                         .font(.system(size: 14))
                         .foregroundStyle(Theme.secondary)
                         .padding(.top, 6)

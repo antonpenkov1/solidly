@@ -30,7 +30,7 @@ struct LogBottleIntent: AppIntent {
     func perform() async throws -> some IntentResult & ProvidesDialog {
         let worker = StorageWorker.shared
         guard let child = worker.activeChild() else {
-            return .result(dialog: "Add a baby in Solidly first.")
+            return .result(dialog: "Add a baby in Spoonlet first.")
         }
 
         worker.save(feed: FeedEntry(
@@ -68,7 +68,7 @@ struct LogMealIntent: AppIntent {
     func perform() async throws -> some IntentResult & ProvidesDialog {
         let worker = StorageWorker.shared
         guard let child = worker.activeChild() else {
-            return .result(dialog: "Add a baby in Solidly first.")
+            return .result(dialog: "Add a baby in Spoonlet first.")
         }
 
         worker.save(feed: FeedEntry(
@@ -92,7 +92,7 @@ struct TodayIntakeIntent: AppIntent {
     func perform() async throws -> some IntentResult & ProvidesDialog {
         let worker = StorageWorker.shared
         guard let child = worker.activeChild() else {
-            return .result(dialog: "Add a baby in Solidly first.")
+            return .result(dialog: "Add a baby in Spoonlet first.")
         }
 
         let settings = worker.settings()

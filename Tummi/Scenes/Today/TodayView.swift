@@ -38,7 +38,7 @@ struct TodayView: View {
                 EmptyStateView(
                     symbol: "sun.max",
                     title: String(localized: "No child yet"),
-                    message: String(localized: "Solidly needs a date of birth to know which guidance applies."),
+                    message: String(localized: "Spoonlet needs a date of birth to know which guidance applies."),
                     actionTitle: String(localized: "Add your baby"),
                     actionSymbol: "person.crop.circle.badge.plus",
                     action: { showsSettings = true }
@@ -55,7 +55,7 @@ struct TodayView: View {
                     storageKey: "hint.citations",
                     symbol: "hand.tap",
                     title: String(localized: "Tap any source to read it"),
-                    message: String(localized: "The little green chips under each card open the guideline or study it came from. That is the whole point of Solidly — nothing here asks you to take its word for it.")
+                    message: String(localized: "The little green chips under each card open the guideline or study it came from. That is the whole point of Spoonlet — nothing here asks you to take its word for it.")
                 )
                 if let note = model.newFoodNote { newFoodBanner(note) }
                 allergenCard(model)

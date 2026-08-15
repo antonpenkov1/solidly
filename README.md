@@ -1,4 +1,4 @@
-# Solidly
+# Spoonlet
 
 An iOS infant-feeding app that shows its work: every recommendation names the guideline or
 trial it comes from, and every number can be replaced by the one your own paediatrician gave you.
@@ -14,7 +14,7 @@ The market splits in two and neither half does the other's job:
 - **Tracker apps** (Baby Daybook, Huckleberry, Tinylog) count millilitres and plot WHO
   percentiles, but never say a word about what to feed or why.
 
-Solidly sits in the gap:
+Spoonlet sits in the gap:
 
 1. **Amounts against guidance.** "7 mo 2 wk: today's range is 90–257 g across 2–3 meals; you
    have logged 140 g." The WHO portion ladder is interpolated across each stage, so the target
@@ -177,7 +177,7 @@ Multi-argument strings therefore use `String(format: String(localized: "%1$@ …
 
 ## The app icon
 
-Solidly ships a layered **Liquid Glass** icon (`AppIcon.icon`), not a flat PNG. On iOS 26 a
+Spoonlet ships a layered **Liquid Glass** icon (`AppIcon.icon`), not a flat PNG. On iOS 26 a
 baked PNG is passed through untouched and reads as an iOS 18 icon on an iOS 26 home screen;
 the glass material, specular highlight, drop shadow and background gradient only appear if
 the system is handed layers plus a fill. It then derives the light, dark and tinted 1024s

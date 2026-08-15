@@ -441,12 +441,12 @@
         }
       }
     },
-    "A single measurement is just a number. Add one and Solidly can start showing the curve.": {
+    "A single measurement is just a number. Add one and Spoonlet can start showing the curve.": {
       "localizations": {
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Одно измерение — просто число. Добавьте его, и Solidly начнёт строить кривую."
+            "value": "Одно измерение — просто число. Добавьте его, и Spoonlet начнёт строить кривую."
           }
         }
       }
@@ -471,12 +471,12 @@
         }
       }
     },
-    "Add a baby in Solidly first.": {
+    "Add a baby in Spoonlet first.": {
       "localizations": {
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Сначала добавьте ребёнка в Solidly."
+            "value": "Сначала добавьте ребёнка в Spoonlet."
           }
         }
       }
@@ -501,12 +501,12 @@
         }
       }
     },
-    "Add a weight or a length and Solidly will plot it against the WHO curves for your baby's age and sex.": {
+    "Add a weight or a length and Spoonlet will plot it against the WHO curves for your baby's age and sex.": {
       "localizations": {
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Добавьте вес или длину, и Solidly нанесёт их на кривые ВОЗ для возраста и пола вашего ребёнка."
+            "value": "Добавьте вес или длину, и Spoonlet нанесёт их на кривые ВОЗ для возраста и пола вашего ребёнка."
           }
         }
       }
@@ -991,12 +991,12 @@
         }
       }
     },
-    "Enter the number your paediatrician gave you. Solidly will use it as the plan and keep showing the published range alongside, so you always know both.": {
+    "Enter the number your paediatrician gave you. Spoonlet will use it as the plan and keep showing the published range alongside, so you always know both.": {
       "localizations": {
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Введите цифру, которую назвал ваш педиатр. Solidly возьмёт её за план и продолжит показывать рядом опубликованный диапазон, чтобы вы всегда видели оба."
+            "value": "Введите цифру, которую назвал ваш педиатр. Spoonlet возьмёт её за план и продолжит показывать рядом опубликованный диапазон, чтобы вы всегда видели оба."
           }
         }
       }
@@ -1031,22 +1031,22 @@
         }
       }
     },
-    "Every source Solidly uses": {
+    "Every source Spoonlet uses": {
       "localizations": {
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Все источники Solidly"
+            "value": "Все источники Spoonlet"
           }
         }
       }
     },
-    "Everything is stored on this device. Solidly has no account, no server and no analytics.": {
+    "Everything is stored on this device. Spoonlet has no account, no server and no analytics.": {
       "localizations": {
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Всё хранится на этом устройстве. У Solidly нет аккаунта, сервера и аналитики."
+            "value": "Всё хранится на этом устройстве. У Spoonlet нет аккаунта, сервера и аналитики."
           }
         }
       }
@@ -1331,12 +1331,12 @@
         }
       }
     },
-    "How Solidly works": {
+    "How Spoonlet works": {
       "localizations": {
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Как устроено Solidly"
+            "value": "Как устроено Spoonlet"
           }
         }
       }
@@ -1391,12 +1391,12 @@
         }
       }
     },
-    "If your paediatrician gave you a different age, put it here. Solidly will use your date and still show you what the published guidance says.": {
+    "If your paediatrician gave you a different age, put it here. Spoonlet will use your date and still show you what the published guidance says.": {
       "localizations": {
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Если ваш педиатр назвал другой возраст, укажите его здесь. Solidly будет использовать вашу дату и всё равно покажет, что говорят опубликованные рекомендации."
+            "value": "Если ваш педиатр назвал другой возраст, укажите его здесь. Spoonlet будет использовать вашу дату и всё равно покажет, что говорят опубликованные рекомендации."
           }
         }
       }
@@ -1601,12 +1601,12 @@
         }
       }
     },
-    "Log a feed and Solidly will start tracking it against the guidance for this age.": {
+    "Log a feed and Spoonlet will start tracking it against the guidance for this age.": {
       "localizations": {
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Запишите кормление, и Solidly начнёт сверять его с рекомендациями для этого возраста."
+            "value": "Запишите кормление, и Spoonlet начнёт сверять его с рекомендациями для этого возраста."
           }
         }
       }
@@ -1995,22 +1995,22 @@
         }
       }
     },
-    "Notifications are turned off for Solidly in iOS Settings, so these will not appear.": {
+    "Notifications are turned off for Spoonlet in iOS Settings, so these will not appear.": {
       "localizations": {
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Уведомления для Solidly выключены в настройках iOS — эти напоминания не появятся."
+            "value": "Уведомления для Spoonlet выключены в настройках iOS — эти напоминания не появятся."
           }
         }
       }
     },
-    "Open Solidly to get started": {
+    "Open Spoonlet to get started": {
       "localizations": {
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Откройте Solidly, чтобы начать"
+            "value": "Откройте Spoonlet, чтобы начать"
           }
         }
       }
@@ -2299,76 +2299,76 @@
         }
       }
     },
-    "Solidly": {
-      "extractionState": "manual",
-      "shouldTranslate": false
-    },
-    "Solidly does not have opinions of its own. Everything it says traces to one of these.": {
-      "localizations": {
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "У Solidly нет собственного мнения. Всё, что оно говорит, восходит к одному из этих источников."
-          }
-        }
-      }
-    },
-    "Solidly has no account and no server. Everything lives in this app's storage on this device, and nothing is sent anywhere unless you export it yourself.": {
-      "localizations": {
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "У Solidly нет аккаунта и сервера. Всё живёт в хранилище приложения на этом устройстве, и никуда не отправляется, пока вы сами не сделаете экспорт."
-          }
-        }
-      }
-    },
-    "Solidly is not a doctor": {
-      "localizations": {
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Solidly — не врач"
-          }
-        }
-      }
-    },
-    "Solidly needs a date of birth to know which guidance applies.": {
-      "localizations": {
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Solidly нужна дата рождения, чтобы понять, какие рекомендации применять."
-          }
-        }
-      }
-    },
-    "Solidly summarises published infant feeding guidance. It is not a medical device, it does not diagnose, and it cannot examine your baby. Always check with your paediatrician before making decisions about feeding, supplements or allergen introduction — and seek urgent care for breathing difficulty, facial swelling, repeated vomiting after a food, or a baby who stops feeding.": {
-      "localizations": {
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Solidly пересказывает опубликованные рекомендации по питанию детей. Это не медицинское изделие, оно не ставит диагнозов и не может осмотреть вашего ребёнка. Всегда сверяйтесь с педиатром, принимая решения о питании, добавках и введении аллергенов, и обращайтесь за срочной помощью при затруднённом дыхании, отёке лица, многократной рвоте после продукта или если ребёнок перестал есть."
-          }
-        }
-      }
-    },
-    "Solidly will use corrected age for feeding milestones and growth charts, which is how they are meant to be read for preterm babies.": {
-      "localizations": {
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Solidly будет использовать скорректированный возраст для этапов прикорма и кривых роста — именно так их и положено читать для недоношенных детей."
-          }
-        }
-      }
-    },
     "Sources": {
       "localizations": {
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Источники"
+          }
+        }
+      }
+    },
+    "Spoonlet": {
+      "extractionState": "manual",
+      "shouldTranslate": false
+    },
+    "Spoonlet does not have opinions of its own. Everything it says traces to one of these.": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "У Spoonlet нет собственного мнения. Всё, что оно говорит, восходит к одному из этих источников."
+          }
+        }
+      }
+    },
+    "Spoonlet has no account and no server. Everything lives in this app's storage on this device, and nothing is sent anywhere unless you export it yourself.": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "У Spoonlet нет аккаунта и сервера. Всё живёт в хранилище приложения на этом устройстве, и никуда не отправляется, пока вы сами не сделаете экспорт."
+          }
+        }
+      }
+    },
+    "Spoonlet is not a doctor": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spoonlet — не врач"
+          }
+        }
+      }
+    },
+    "Spoonlet needs a date of birth to know which guidance applies.": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spoonlet нужна дата рождения, чтобы понять, какие рекомендации применять."
+          }
+        }
+      }
+    },
+    "Spoonlet summarises published infant feeding guidance. It is not a medical device, it does not diagnose, and it cannot examine your baby. Always check with your paediatrician before making decisions about feeding, supplements or allergen introduction — and seek urgent care for breathing difficulty, facial swelling, repeated vomiting after a food, or a baby who stops feeding.": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spoonlet пересказывает опубликованные рекомендации по питанию детей. Это не медицинское изделие, оно не ставит диагнозов и не может осмотреть вашего ребёнка. Всегда сверяйтесь с педиатром, принимая решения о питании, добавках и введении аллергенов, и обращайтесь за срочной помощью при затруднённом дыхании, отёке лица, многократной рвоте после продукта или если ребёнок перестал есть."
+          }
+        }
+      }
+    },
+    "Spoonlet will use corrected age for feeding milestones and growth charts, which is how they are meant to be read for preterm babies.": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spoonlet будет использовать скорректированный возраст для этапов прикорма и кривых роста — именно так их и положено читать для недоношенных детей."
           }
         }
       }
@@ -2473,12 +2473,12 @@
         }
       }
     },
-    "The little green chips under each card open the guideline or study it came from. That is the whole point of Solidly — nothing here asks you to take its word for it.": {
+    "The little green chips under each card open the guideline or study it came from. That is the whole point of Spoonlet — nothing here asks you to take its word for it.": {
       "localizations": {
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Маленькие зелёные плашки под каждой карточкой открывают гайд или исследование, откуда взята рекомендация. В этом весь смысл Solidly: оно не просит верить на слово."
+            "value": "Маленькие зелёные плашки под каждой карточкой открывают гайд или исследование, откуда взята рекомендация. В этом весь смысл Spoonlet: оно не просит верить на слово."
           }
         }
       }
@@ -2503,12 +2503,12 @@
         }
       }
     },
-    "Three reminders, and nothing else. Solidly will never nag you about feeds — you already know when your baby is hungry.": {
+    "Three reminders, and nothing else. Spoonlet will never nag you about feeds — you already know when your baby is hungry.": {
       "localizations": {
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Три напоминания и больше ничего. Solidly никогда не будет напоминать о кормлениях — вы и так знаете, когда ребёнок голоден."
+            "value": "Три напоминания и больше ничего. Spoonlet никогда не будет напоминать о кормлениях — вы и так знаете, когда ребёнок голоден."
           }
         }
       }
@@ -2563,22 +2563,22 @@
         }
       }
     },
-    "Today's guidance is %1$@ meals and about %2$@ of food. Log a feed and Solidly will start tracking against it.": {
+    "Today's guidance is %1$@ meals and about %2$@ of food. Log a feed and Spoonlet will start tracking against it.": {
       "localizations": {
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ориентир на сегодня — %1$@ приёмов пищи и около %2$@ еды. Запишите кормление, и Solidly начнёт сверять."
+            "value": "Ориентир на сегодня — %1$@ приёмов пищи и около %2$@ еды. Запишите кормление, и Spoonlet начнёт сверять."
           }
         }
       }
     },
-    "Today's guidance is %1$@ milk feeds. Log one and Solidly will start tracking against it.": {
+    "Today's guidance is %1$@ milk feeds. Log one and Spoonlet will start tracking against it.": {
       "localizations": {
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ориентир на сегодня — %1$@ молочных кормлений. Запишите одно, и Solidly начнёт сверять."
+            "value": "Ориентир на сегодня — %1$@ молочных кормлений. Запишите одно, и Spoonlet начнёт сверять."
           }
         }
       }
@@ -2643,12 +2643,12 @@
         }
       }
     },
-    "Under every recommendation you will see something like “WHO, 2023”. Tap it and the actual guideline opens. Nothing in Solidly asks you to take its word for it.": {
+    "Under every recommendation you will see something like “WHO, 2023”. Tap it and the actual guideline opens. Nothing in Spoonlet asks you to take its word for it.": {
       "localizations": {
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Под каждой рекомендацией вы увидите что-то вроде «WHO, 2023». Нажмите — откроется сам гайд. Solidly нигде не просит верить на слово."
+            "value": "Под каждой рекомендацией вы увидите что-то вроде «WHO, 2023». Нажмите — откроется сам гайд. Spoonlet нигде не просит верить на слово."
           }
         }
       }

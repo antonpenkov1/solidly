@@ -35,7 +35,7 @@ targets:
     info:
       path: Tummi/Info.plist
       properties:
-        CFBundleDisplayName: Solidly
+        CFBundleDisplayName: Spoonlet
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         ITSAppUsesNonExemptEncryption: false
@@ -87,7 +87,7 @@ targets:
     info:
       path: TummiWidget/Info.plist
       properties:
-        CFBundleDisplayName: Solidly
+        CFBundleDisplayName: Spoonlet
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         NSExtension:

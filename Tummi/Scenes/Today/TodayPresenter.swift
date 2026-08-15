@@ -64,18 +64,18 @@ final class TodayPresenter: TodayPresentationLogic {
             let dayLow = perMeal.lowerBound * Double(meals.lowerBound)
             let dayHigh = perMeal.upperBound * Double(meals.upperBound)
             return String(
-                format: String(localized: "Today's guidance is %1$@ meals and about %2$@ of food. Log a feed and Solidly will start tracking against it."),
+                format: String(localized: "Today's guidance is %1$@ meals and about %2$@ of food. Log a feed and Spoonlet will start tracking against it."),
                 Fmt.intRange(meals),
                 Fmt.range(dayLow...dayHigh, units: units, unit: .g)
             )
         }
         if let feeds = targets.milkFeedsPerDay {
             return String(
-                format: String(localized: "Today's guidance is %1$@ milk feeds. Log one and Solidly will start tracking against it."),
+                format: String(localized: "Today's guidance is %1$@ milk feeds. Log one and Spoonlet will start tracking against it."),
                 Fmt.intRange(feeds)
             )
         }
-        return String(localized: "Log a feed and Solidly will start tracking it against the guidance for this age.")
+        return String(localized: "Log a feed and Spoonlet will start tracking it against the guidance for this age.")
     }
 
     private func ageText(_ response: Today.Load.Response) -> String {

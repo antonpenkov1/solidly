@@ -73,13 +73,13 @@ RU = {
     "Born before 37 weeks": "Родился раньше 37 недель",
     "%lld weeks at birth": {"one": "%lld неделя при рождении", "few": "%lld недели при рождении",
                             "many": "%lld недель при рождении", "other": "%lld недель при рождении"},
-    "Solidly will use corrected age for feeding milestones and growth charts, which is how they are meant to be read for preterm babies.":
-        "Solidly будет использовать скорректированный возраст для этапов прикорма и кривых роста — именно так их и положено читать для недоношенных детей.",
+    "Spoonlet will use corrected age for feeding milestones and growth charts, which is how they are meant to be read for preterm babies.":
+        "Spoonlet будет использовать скорректированный возраст для этапов прикорма и кривых роста — именно так их и положено читать для недоношенных детей.",
     "Units": "Единицы",
     "Metric": "Метрические",
     "Imperial": "Имперские",
     "Before you start": "Прежде чем начать",
-    "Solidly is not a doctor": "Solidly — не врач",
+    "Spoonlet is not a doctor": "Spoonlet — не врач",
     "It summarises published guidance. It does not diagnose anything, and it cannot see your baby. Your paediatrician's advice takes priority over everything shown here — and you can enter their numbers so the app follows them instead.":
         "Приложение пересказывает опубликованные рекомендации. Оно ничего не диагностирует и не видит вашего ребёнка. Слово вашего педиатра важнее всего, что здесь показано, — и вы можете внести его цифры, чтобы приложение следовало им.",
     "Amounts are ranges, not targets": "Количество — это диапазон, а не норма",
@@ -89,8 +89,8 @@ RU = {
     "Trouble breathing, a swollen face or lips, repeated vomiting after a food, blood in stool, or a baby who has stopped feeding — contact emergency services or your doctor, not an app.":
         "Затруднённое дыхание, отёк лица или губ, многократная рвота после продукта, кровь в стуле или ребёнок перестал есть — звоните в скорую или врачу, а не открывайте приложение.",
     "Your data stays here": "Данные остаются здесь",
-    "Everything is stored on this device. Solidly has no account, no server and no analytics.":
-        "Всё хранится на этом устройстве. У Solidly нет аккаунта, сервера и аналитики.",
+    "Everything is stored on this device. Spoonlet has no account, no server and no analytics.":
+        "Всё хранится на этом устройстве. У Spoonlet нет аккаунта, сервера и аналитики.",
     "I understand — start tracking": "Понятно — начать",
     "That date is in the future.": "Эта дата в будущем.",
     "Baby": "Малыш",
@@ -239,8 +239,8 @@ RU = {
     "Log this food": "Записать этот продукт",
     "My paediatrician said otherwise": "Мой педиатр сказал иначе",
     "When may we start %@?": "Когда можно начинать «%@»?",
-    "If your paediatrician gave you a different age, put it here. Solidly will use your date and still show you what the published guidance says.":
-        "Если ваш педиатр назвал другой возраст, укажите его здесь. Solidly будет использовать вашу дату и всё равно покажет, что говорят опубликованные рекомендации.",
+    "If your paediatrician gave you a different age, put it here. Spoonlet will use your date and still show you what the published guidance says.":
+        "Если ваш педиатр назвал другой возраст, укажите его здесь. Spoonlet будет использовать вашу дату и всё равно покажет, что говорят опубликованные рекомендации.",
     "Your plan: from %@ months.": "Ваш план: с %@ мес.",
     "Your plan: from %1$@ months — %2$@.": "Ваш план: с %1$@ мес — %2$@.",
 
@@ -262,8 +262,8 @@ RU = {
     "Your paediatrician's numbers are in use — %@.": "Используются цифры вашего педиатра — %@.",
     "Tap any number below to replace it with the one your doctor gave you.":
         "Нажмите на любую цифру ниже, чтобы заменить её на ту, что дал ваш врач.",
-    "Enter the number your paediatrician gave you. Solidly will use it as the plan and keep showing the published range alongside, so you always know both.":
-        "Введите цифру, которую назвал ваш педиатр. Solidly возьмёт её за план и продолжит показывать рядом опубликованный диапазон, чтобы вы всегда видели оба.",
+    "Enter the number your paediatrician gave you. Spoonlet will use it as the plan and keep showing the published range alongside, so you always know both.":
+        "Введите цифру, которую назвал ваш педиатр. Spoonlet возьмёт её за план и продолжит показывать рядом опубликованный диапазон, чтобы вы всегда видели оба.",
     "Value": "Значение",
     "Who said so": "Кто назначил",
     "e.g. Dr Ivanova, 12 Aug": "напр. Иванова А.П., 12 авг.",
@@ -275,9 +275,9 @@ RU = {
     "within a month": "в течение месяца",
     "in %lld months": {"one": "через %lld месяц", "few": "через %lld месяца",
                        "many": "через %lld месяцев", "other": "через %lld месяцев"},
-    "Every source Solidly uses": "Все источники Solidly",
-    "Solidly does not have opinions of its own. Everything it says traces to one of these.":
-        "У Solidly нет собственного мнения. Всё, что оно говорит, восходит к одному из этих источников.",
+    "Every source Spoonlet uses": "Все источники Spoonlet",
+    "Spoonlet does not have opinions of its own. Everything it says traces to one of these.":
+        "У Spoonlet нет собственного мнения. Всё, что оно говорит, восходит к одному из этих источников.",
     "meals": "приёмов",
 
     # --- Growth ----------------------------------------------------------------
@@ -289,8 +289,8 @@ RU = {
     "Date": "Дата",
     "Measurement": "Измерение",
     "No measurements yet": "Измерений пока нет",
-    "Add a weight or a length and Solidly will plot it against the WHO curves for your baby's age and sex.":
-        "Добавьте вес или длину, и Solidly нанесёт их на кривые ВОЗ для возраста и пола вашего ребёнка.",
+    "Add a weight or a length and Spoonlet will plot it against the WHO curves for your baby's age and sex.":
+        "Добавьте вес или длину, и Spoonlet нанесёт их на кривые ВОЗ для возраста и пола вашего ребёнка.",
     "Against the WHO curves": "На фоне кривых ВОЗ",
     "%@th percentile": "%@-й перцентиль",
     "p%@": "п%@",
@@ -322,16 +322,16 @@ RU = {
         "Когда включено, введённые вами количества и возрасты введения заменяют опубликованные диапазоны по всему приложению. Рекомендации остаются видны рядом, чтобы вы видели и то, и другое.",
     "Reset all my overrides": "Сбросить все мои изменения",
     "Your data": "Ваши данные",
-    "Solidly has no account and no server. Everything lives in this app's storage on this device, and nothing is sent anywhere unless you export it yourself.":
-        "У Solidly нет аккаунта и сервера. Всё живёт в хранилище приложения на этом устройстве, и никуда не отправляется, пока вы сами не сделаете экспорт.",
+    "Spoonlet has no account and no server. Everything lives in this app's storage on this device, and nothing is sent anywhere unless you export it yourself.":
+        "У Spoonlet нет аккаунта и сервера. Всё живёт в хранилище приложения на этом устройстве, и никуда не отправляется, пока вы сами не сделаете экспорт.",
     "Export as JSON": "Экспорт в JSON",
     "Delete all data": "Удалить все данные",
     "Delete all data?": "Удалить все данные?",
     "Every feed, measurement and note for this child will be removed from this device. This cannot be undone.":
         "Все кормления, измерения и заметки об этом ребёнке будут удалены с устройства. Отменить это нельзя.",
     "Important": "Важно",
-    "Solidly summarises published infant feeding guidance. It is not a medical device, it does not diagnose, and it cannot examine your baby. Always check with your paediatrician before making decisions about feeding, supplements or allergen introduction — and seek urgent care for breathing difficulty, facial swelling, repeated vomiting after a food, or a baby who stops feeding.":
-        "Solidly пересказывает опубликованные рекомендации по питанию детей. Это не медицинское изделие, оно не ставит диагнозов и не может осмотреть вашего ребёнка. Всегда сверяйтесь с педиатром, принимая решения о питании, добавках и введении аллергенов, и обращайтесь за срочной помощью при затруднённом дыхании, отёке лица, многократной рвоте после продукта или если ребёнок перестал есть.",
+    "Spoonlet summarises published infant feeding guidance. It is not a medical device, it does not diagnose, and it cannot examine your baby. Always check with your paediatrician before making decisions about feeding, supplements or allergen introduction — and seek urgent care for breathing difficulty, facial swelling, repeated vomiting after a food, or a baby who stops feeding.":
+        "Spoonlet пересказывает опубликованные рекомендации по питанию детей. Это не медицинское изделие, оно не ставит диагнозов и не может осмотреть вашего ребёнка. Всегда сверяйтесь с педиатром, принимая решения о питании, добавках и введении аллергенов, и обращайтесь за срочной помощью при затруднённом дыхании, отёке лица, многократной рвоте после продукта или если ребёнок перестал есть.",
 
     # --- Units and short forms -------------------------------------------------
     "g": "г",
@@ -357,8 +357,8 @@ RU = {
 
     # --- Reminders -------------------------------------------------------------
     "Reminders": "Напоминания",
-    "Three reminders, and nothing else. Solidly will never nag you about feeds — you already know when your baby is hungry.":
-        "Три напоминания и больше ничего. Solidly никогда не будет напоминать о кормлениях — вы и так знаете, когда ребёнок голоден.",
+    "Three reminders, and nothing else. Spoonlet will never nag you about feeds — you already know when your baby is hungry.":
+        "Три напоминания и больше ничего. Spoonlet никогда не будет напоминать о кормлениях — вы и так знаете, когда ребёнок голоден.",
     "Allergen upkeep": "Поддержание аллергенов",
     "Weekly, only when something introduced has been quietly dropped":
         "Раз в неделю и только если введённое незаметно перестали давать",
@@ -368,16 +368,16 @@ RU = {
     "New stage": "Новый этап",
     "At 4, 6, 9, 12 and 24 months, when the guidance changes":
         "В 4, 6, 9, 12 и 24 месяца, когда меняются рекомендации",
-    "Notifications are turned off for Solidly in iOS Settings, so these will not appear.":
-        "Уведомления для Solidly выключены в настройках iOS — эти напоминания не появятся.",
+    "Notifications are turned off for Spoonlet in iOS Settings, so these will not appear.":
+        "Уведомления для Spoonlet выключены в настройках iOS — эти напоминания не появятся.",
     "Keep the allergens going": "Не бросайте аллергены",
     "%@ was introduced but has not been offered lately. Regular exposure is what the prevention trials tested.":
         "«%@» уже вводили, но давно не давали. В исследованиях по профилактике проверяли именно регулярность.",
     "These were introduced but have not been offered lately: %@.":
         "Эти уже вводили, но давно не давали: %@.",
     "Time for a weigh-in": "Пора взвесить",
-    "A single measurement is just a number. Add one and Solidly can start showing the curve.":
-        "Одно измерение — просто число. Добавьте его, и Solidly начнёт строить кривую.",
+    "A single measurement is just a number. Add one and Spoonlet can start showing the curve.":
+        "Одно измерение — просто число. Добавьте его, и Spoonlet начнёт строить кривую.",
     "It has been a while since the last measurement. One more point keeps the curve honest.":
         "С последнего измерения прошло много времени. Ещё одна точка — и кривая останется честной.",
     "New stage: %@": "Новый этап: %@",
@@ -399,7 +399,7 @@ RU = {
     # The ${…} tokens are parameter references and must survive translation verbatim.
     "Log a ${millilitres} ml bottle": "Записать бутылочку ${millilitres} мл",
     "Log a ${grams} g meal": "Записать приём пищи ${grams} г",
-    "Add a baby in Solidly first.": "Сначала добавьте ребёнка в Solidly.",
+    "Add a baby in Spoonlet first.": "Сначала добавьте ребёнка в Spoonlet.",
     "Logged.": "Записано.",
     "Logged. %1$@ so far today.": "Записано. Сегодня уже %1$@.",
     "Nothing logged yet today.": "Сегодня пока ничего не записано.",
@@ -415,12 +415,12 @@ RU = {
     "%lld feeds": "кормлений: %lld",
     "%1$lld of %2$lld–%3$lld meals": "приёмов: %1$lld из %2$lld–%3$lld",
     "Keep up: %@": "Не бросайте: %@",
-    "Open Solidly to get started": "Откройте Solidly, чтобы начать",
+    "Open Spoonlet to get started": "Откройте Spoonlet, чтобы начать",
     "Today's food and milk against the guidance range for your baby's age.":
         "Еда и молоко за сегодня относительно диапазона для возраста ребёнка.",
 
     # --- Onboarding tour -------------------------------------------------------
-    "How Solidly works": "Как устроено Solidly",
+    "How Spoonlet works": "Как устроено Spoonlet",
     "Five screens. You will mostly live on the first one.":
         "Пять экранов. Жить вы будете в основном на первом.",
     "Log a feed in two taps and see how the day compares to the range for your baby's age.":
@@ -434,32 +434,32 @@ RU = {
     "Weight, length and head circumference on the real WHO curves.":
         "Вес, длина и окружность головы на настоящих кривых ВОЗ.",
     "The green chips are links": "Зелёные плашки — это ссылки",
-    "Under every recommendation you will see something like “WHO, 2023”. Tap it and the actual guideline opens. Nothing in Solidly asks you to take its word for it.":
-        "Под каждой рекомендацией вы увидите что-то вроде «WHO, 2023». Нажмите — откроется сам гайд. Solidly нигде не просит верить на слово.",
+    "Under every recommendation you will see something like “WHO, 2023”. Tap it and the actual guideline opens. Nothing in Spoonlet asks you to take its word for it.":
+        "Под каждой рекомендацией вы увидите что-то вроде «WHO, 2023». Нажмите — откроется сам гайд. Spoonlet нигде не просит верить на слово.",
     "Got it": "Понятно",
 
     # --- Empty states and first-run hints --------------------------------------
     "Tap any source to read it": "Нажмите на источник, чтобы прочитать",
-    "The little green chips under each card open the guideline or study it came from. That is the whole point of Solidly — nothing here asks you to take its word for it.":
-        "Маленькие зелёные плашки под каждой карточкой открывают гайд или исследование, откуда взята рекомендация. В этом весь смысл Solidly: оно не просит верить на слово.",
+    "The little green chips under each card open the guideline or study it came from. That is the whole point of Spoonlet — nothing here asks you to take its word for it.":
+        "Маленькие зелёные плашки под каждой карточкой открывают гайд или исследование, откуда взята рекомендация. В этом весь смысл Spoonlet: оно не просит верить на слово.",
     "Use the buttons above": "Кнопки сверху",
-    "Today's guidance is %1$@ meals and about %2$@ of food. Log a feed and Solidly will start tracking against it.":
-        "Ориентир на сегодня — %1$@ приёмов пищи и около %2$@ еды. Запишите кормление, и Solidly начнёт сверять.",
-    "Today's guidance is %1$@ milk feeds. Log one and Solidly will start tracking against it.":
-        "Ориентир на сегодня — %1$@ молочных кормлений. Запишите одно, и Solidly начнёт сверять.",
-    "Log a feed and Solidly will start tracking it against the guidance for this age.":
-        "Запишите кормление, и Solidly начнёт сверять его с рекомендациями для этого возраста.",
+    "Today's guidance is %1$@ meals and about %2$@ of food. Log a feed and Spoonlet will start tracking against it.":
+        "Ориентир на сегодня — %1$@ приёмов пищи и около %2$@ еды. Запишите кормление, и Spoonlet начнёт сверять.",
+    "Today's guidance is %1$@ milk feeds. Log one and Spoonlet will start tracking against it.":
+        "Ориентир на сегодня — %1$@ молочных кормлений. Запишите одно, и Spoonlet начнёт сверять.",
+    "Log a feed and Spoonlet will start tracking it against the guidance for this age.":
+        "Запишите кормление, и Spoonlet начнёт сверять его с рекомендациями для этого возраста.",
     "Record something": "Сделать запись",
     "Every feed, nappy and nap you record shows up here, newest first, grouped by day.":
         "Все кормления, подгузники и сны появляются здесь — сначала свежие, сгруппированные по дням.",
     "Add a measurement": "Добавить измерение",
     "Add your baby": "Добавить ребёнка",
-    "Solidly needs a date of birth to know which guidance applies.":
-        "Solidly нужна дата рождения, чтобы понять, какие рекомендации применять.",
+    "Spoonlet needs a date of birth to know which guidance applies.":
+        "Spoonlet нужна дата рождения, чтобы понять, какие рекомендации применять.",
 }
 
 # Purely structural strings — the English "translation" is the correct Russian one too.
-PASSTHROUGH = {"Solidly", "Series", "0", "—", "/ %@", "%1$@ %2$@", "%1$@ · %2$@"}
+PASSTHROUGH = {"Spoonlet", "Series", "0", "—", "/ %@", "%1$@ %2$@", "%1$@ · %2$@"}
 
 # English needs plural variations too, or a baby with one exposure reads "1 exposures".
 # Only single-argument count strings that can legitimately be 1 are listed; the presenters
