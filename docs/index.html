@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tummi — baby feeding, with sources</title>
+<meta name="description" content="An iOS infant feeding tracker where every recommendation cites the guideline or trial behind it, and your paediatrician's numbers override all of it.">
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    max-width: 44rem; margin: 0 auto; padding: 3rem 1.25rem 4rem;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #faf5eb; color: #211d19;
+  }
+  @media (prefers-color-scheme: dark) { body { background: #141312; color: #f1efeb; } }
+  h1 { font-size: 2.4rem; margin: 0 0 .35rem; letter-spacing: -.01em; }
+  .tag { font-size: 1.1rem; color: #7a7166; margin-top: 0; }
+  h2 { font-size: 1.1rem; margin-top: 2.5rem; }
+  ul { padding-left: 1.15rem; }
+  li { margin-bottom: .45rem; }
+  a { color: #3e765c; }
+  @media (prefers-color-scheme: dark) { a { color: #6fb490; } }
+  .box { border: 1px solid #d8cfc0; border-radius: 14px; padding: 1rem 1.15rem; margin: 1.75rem 0; }
+  @media (prefers-color-scheme: dark) { .box { border-color: #363330; } }
+  footer { margin-top: 3.5rem; font-size: .875rem; color: #7a7166; }
+</style>
+</head>
+<body>
+
+<h1>Tummi</h1>
+<p class="tag">Baby feeding, with the reasoning attached.</p>
+
+<p>
+  Most baby apps do one of two things. Some explain what to introduce and how to cut it safely,
+  but refuse to count anything. Others count millilitres and plot growth curves, but never say a
+  word about what to feed or why. Tummi does both, and names its sources for all of it.
+</p>
+
+<h2>What it does</h2>
+<ul>
+  <li>Tracks feeds in grams and millilitres, and compares them to the published range for your
+      baby's exact age — not a generic target.</li>
+  <li>148 foods with the age each is usually introduced, allergen status, choking risk and how to
+      cut and serve it at 6–8 months and again from 9 months. Plus 20 things to hold off on, each
+      with the reason.</li>
+  <li>Plots weight, length and head circumference on the real WHO Child Growth Standards.</li>
+  <li>Notices which of the top-9 allergens were introduced once and then quietly dropped — the
+      failure mode the LEAP and EAT trials warn about.</li>
+  <li>Every recommendation carries a tappable citation. Eighteen sources, listed in full in the app.</li>
+  <li>Your paediatrician's amounts and introduction ages override the published ones, with their
+      name attached — while the guidance stays visible alongside.</li>
+</ul>
+
+<div class="box">
+  <strong>Privacy:</strong> no account, no server, no analytics. Everything stays on your device.
+  <a href="privacy.html">Full privacy policy</a>.
+</div>
+
+<h2>Support</h2>
+<p>
+  Questions, bug reports or a correction to the food data:
+  <a href="mailto:anton.penkov1@gmail.com">anton.penkov1@gmail.com</a>, or open an issue on
+  <a href="https://github.com/antonpenkov1/tummi">GitHub</a>.
+</p>
+<p>
+  Corrections to the guidance itself are especially welcome. If something in the app misrepresents
+  a source, that is a bug and will be treated as one.
+</p>
+
+<h2>Not medical advice</h2>
+<p>
+  Tummi summarises published infant-feeding guidance and cites it. It is not a medical device, it
+  does not diagnose, and it cannot examine your child. Always consult your paediatrician before
+  making decisions about feeding, supplements or allergen introduction.
+</p>
+
+<footer>
+  Tummi is an independent app. It is not affiliated with, endorsed by, or connected to the World
+  Health Organization, ESPGHAN, the American Academy of Pediatrics, NIAID or any other body whose
+  guidance it cites.
+</footer>
+
+</body>
+</html>
