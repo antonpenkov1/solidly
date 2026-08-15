@@ -4,12 +4,12 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.antonpenkov.tummi</string>
+		<string>group.com.antonpenkov.spoonlet</string>
 	</array>
 
 	<!--
 	  iCloud sync is code-ready and switched off. To enable it:
-	    1. Create the CloudKit container iCloud.com.antonpenkov.tummi in the developer account.
+	    1. Create the CloudKit container iCloud.com.antonpenkov.spoonlet in the developer account.
 	    2. Uncomment the three keys below.
 	    3. Set Persistence.iCloudSyncEnabled = true.
 	    4. Update the App Privacy answers — data would then leave the device.
@@ -17,7 +17,7 @@
 
 	<key>com.apple.developer.icloud-container-identifiers</key>
 	<array>
-		<string>iCloud.com.antonpenkov.tummi</string>
+		<string>iCloud.com.antonpenkov.spoonlet</string>
 	</array>
 	<key>com.apple.developer.icloud-services</key>
 	<array>

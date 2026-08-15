@@ -1,6 +1,6 @@
 import Foundation
 
-/// Tummi's first-foods database.
+/// Spoonlet's first-foods database.
 ///
 /// Ages are the ones the cited bodies actually publish. Where guidance differs between
 /// ESPGHAN (Europe) and the AAP (US) — for example on when allergens may start — the

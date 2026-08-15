@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct TummiApp: App {
+struct SpoonletApp: App {
     @AppStorage("appearance") private var appearanceRaw = AppearanceMode.system.rawValue
     @Environment(\.scenePhase) private var scenePhase
 

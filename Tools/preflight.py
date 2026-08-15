@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Checks a built archive against the things App Store Connect rejects on upload.
 
-    xcodebuild -project Tummi.xcodeproj -scheme Tummi -configuration Release \\
-      -destination 'generic/platform=iOS' -archivePath build/Tummi.xcarchive archive
+    xcodebuild -project Spoonlet.xcodeproj -scheme Spoonlet -configuration Release \\
+      -destination 'generic/platform=iOS' -archivePath build/Spoonlet.xcarchive archive
     python3 Tools/preflight.py
 
 Every check here exists because the failure is silent until the upload bounces, and the
@@ -14,9 +14,9 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-ARCHIVE = ROOT / "build" / "Tummi.xcarchive"
-APP = ARCHIVE / "Products/Applications/Tummi.app"
-WIDGET = APP / "PlugIns/TummiWidget.appex"
+ARCHIVE = ROOT / "build" / "Spoonlet.xcarchive"
+APP = ARCHIVE / "Products/Applications/Spoonlet.app"
+WIDGET = APP / "PlugIns/SpoonletWidget.appex"
 
 passed: list[str] = []
 failed: list[str] = []
@@ -69,7 +69,7 @@ def main() -> int:
           "no iPad orientations — a portrait-locked tablet app invites a design rejection")
 
     check(bool(app.get("CFBundleURLTypes")),
-          "tummi:// URL scheme registered",
+          "spoonlet:// URL scheme registered",
           "no CFBundleURLTypes — the widget's deep links will not open")
 
     catalogue = subprocess.run(["xcrun", "assetutil", "--info", str(APP / "Assets.car")],

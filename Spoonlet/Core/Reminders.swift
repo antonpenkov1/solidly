@@ -15,9 +15,9 @@ import UserNotifications
 /// pressure at exactly the wrong moment.
 enum Reminders {
 
-    private static let allergenId = "tummi.allergen.upkeep"
-    private static let growthId = "tummi.growth.checkin"
-    private static let stagePrefix = "tummi.stage."
+    private static let allergenId = "spoonlet.allergen.upkeep"
+    private static let growthId = "spoonlet.growth.checkin"
+    private static let stagePrefix = "spoonlet.stage."
 
     // MARK: - Authorization
 

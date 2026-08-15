@@ -306,7 +306,7 @@ struct SettingsView: View {
     private func export() {
         guard let child, let data = StorageWorker.shared.exportJSON(childId: child.id) else { return }
         let url = FileManager.default.temporaryDirectory
-            .appendingPathComponent("tummi-export.json")
+            .appendingPathComponent("spoonlet-export.json")
         try? data.write(to: url)
         exportURL = url
         showsExport = true

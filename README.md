@@ -34,9 +34,9 @@ Spoonlet sits in the gap:
 
 ```sh
 xcodegen generate
-xcodebuild -project Tummi.xcodeproj -scheme Tummi \
+xcodebuild -project Spoonlet.xcodeproj -scheme Spoonlet \
   -destination 'platform=iOS Simulator,name=iPhone 17 Pro' build
-xcodebuild -project Tummi.xcodeproj -scheme Tummi \
+xcodebuild -project Spoonlet.xcodeproj -scheme Spoonlet \
   -destination 'platform=iOS Simulator,name=iPhone 17 Pro' test
 ```
 
@@ -56,20 +56,20 @@ xcodebuild -project Tummi.xcodeproj -scheme Tummi \
 | `-OnboardingPage N` | Jumps to an onboarding page |
 
 ```sh
-xcrun simctl launch <udid> com.antonpenkov.tummi -DemoSeed 1 -DemoOverrides 1 -OpenTab 3
+xcrun simctl launch <udid> com.antonpenkov.spoonlet -DemoSeed 1 -DemoOverrides 1 -OpenTab 3
 ```
 
 ### Deep links
 
-`tummi://log/solid`, `tummi://log/bottle`, `tummi://log/breast`, `tummi://log/water`,
-`tummi://foods`, `tummi://plan`, `tummi://growth`. The widget uses them so a tap lands on the
+`spoonlet://log/solid`, `spoonlet://log/bottle`, `spoonlet://log/breast`, `spoonlet://log/water`,
+`spoonlet://foods`, `spoonlet://plan`, `spoonlet://growth`. The widget uses them so a tap lands on the
 sheet that changes the figure it showed.
 
 ## Layout
 
 ```
-Tummi/
-  App/            TummiApp, RootView (tab bar + onboarding gate)
+Spoonlet/
+  App/            SpoonletApp, RootView (tab bar + onboarding gate)
   Core/
     Models.swift          value-type DTOs, the interface between store and interactors
     Persistence.swift     SwiftData @Model classes (CloudKit-safe: defaults, no unique attrs)
@@ -85,11 +85,11 @@ Tummi/
     Intents.swift         Siri / Shortcuts: log a bottle, log a meal, how much today
     WidgetShared.swift    the snapshot struct — the only file shared with the extension
     WidgetSync.swift      builds that snapshot from the same Guidance the Today screen uses
-    DeepLink.swift        tummi:// routing
+    DeepLink.swift        spoonlet:// routing
     SharedViews.swift     FlowLayout, citation chips, cards, range bars
     Theme.swift           design system, light + dark
   Scenes/         one folder per scene: Models / Interactor / Presenter / View (+ ViewStore)
-TummiWidget/      WidgetKit extension (small, medium, lock-screen rectangular)
+SpoonletWidget/      WidgetKit extension (small, medium, lock-screen rectangular)
 Tools/
   generate_who.py     regenerates WHOStandards.swift from the WHO xlsx tables
   build_xcstrings.py  rebuilds Localizable.xcstrings from exported strings + the Russian map
@@ -117,8 +117,8 @@ believing any screenshot:
 
 ```sh
 for t in 0 1 2 3 4; do
-  xcrun simctl terminate <udid> com.antonpenkov.tummi
-  xcrun simctl launch <udid> com.antonpenkov.tummi -DemoSeed 1 -DemoEmpty 1 -OpenTab $t
+  xcrun simctl terminate <udid> com.antonpenkov.spoonlet
+  xcrun simctl launch <udid> com.antonpenkov.spoonlet -DemoSeed 1 -DemoEmpty 1 -OpenTab $t
   sleep 3 && xcrun simctl io <udid> screenshot empty-$t.png
 done
 ```
@@ -153,9 +153,9 @@ food library is meant to grow and a curator adding a food should not have to tou
 To add UI copy: write the English literal, then
 
 ```sh
-xcodebuild -project Tummi.xcodeproj -scheme Tummi \
-  -exportLocalizations -localizationPath /tmp/tummi_loc -exportLanguage ru
-python3 Tools/build_xcstrings.py "/tmp/tummi_loc/ru.xcloc/Localized Contents/ru.xliff"
+xcodebuild -project Spoonlet.xcodeproj -scheme Spoonlet \
+  -exportLocalizations -localizationPath /tmp/spoonlet_loc -exportLanguage ru
+python3 Tools/build_xcstrings.py "/tmp/spoonlet_loc/ru.xcloc/Localized Contents/ru.xliff"
 ```
 
 The script prints every key with no Russian entry, so a missing translation is loud.
@@ -224,8 +224,8 @@ since the file dimensions alone look fine.
 
 ## Extensions and system integration
 
-**Widget** (`TummiWidget/`) — small, medium and lock-screen rectangular. It reads a JSON
-snapshot from the `group.com.antonpenkov.tummi` app group and never opens the SwiftData store,
+**Widget** (`SpoonletWidget/`) — small, medium and lock-screen rectangular. It reads a JSON
+snapshot from the `group.com.antonpenkov.spoonlet` app group and never opens the SwiftData store,
 so the store stays single-writer. `WidgetSync` builds that snapshot from the same `Guidance`
 call the Today screen uses, which is why the two can't disagree about today's range. Tapping a
 half of the medium widget deep-links to the sheet that changes the figure it shows.
@@ -245,7 +245,7 @@ judgement — which foods, how it went, whether there was a reaction — stays o
 safety copy is visible.
 
 **iCloud sync** is written and switched off: `Persistence.iCloudSyncEnabled`, plus two entitlement
-keys held in a comment in `Tummi/Tummi.entitlements`. Enabling it also means changing the App
+keys held in a comment in `Spoonlet/Spoonlet.entitlements`. Enabling it also means changing the App
 Privacy answers and `docs/privacy.html`, which is noted in both places.
 
 ## Not done yet

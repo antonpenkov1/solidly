@@ -53,7 +53,7 @@ enum AgeStage: String, CaseIterable, Codable, Hashable {
     }
 }
 
-/// The numbers Tummi shows as "today's target".
+/// The numbers Spoonlet shows as "today's target".
 ///
 /// Ranges, never single numbers: every source that publishes an amount publishes a range,
 /// and a baby who eats at the bottom of it is not behind. A range also makes it much

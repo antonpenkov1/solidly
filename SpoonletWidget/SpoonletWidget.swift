@@ -31,21 +31,21 @@ enum WTheme {
     }
 }
 
-struct TummiEntry: TimelineEntry {
+struct SpoonletEntry: TimelineEntry {
     let date: Date
     let snapshot: WidgetSnapshot
 }
 
-struct TummiProvider: TimelineProvider {
-    func placeholder(in context: Context) -> TummiEntry {
-        TummiEntry(date: Date(), snapshot: .placeholder)
+struct SpoonletProvider: TimelineProvider {
+    func placeholder(in context: Context) -> SpoonletEntry {
+        SpoonletEntry(date: Date(), snapshot: .placeholder)
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (TummiEntry) -> Void) {
-        completion(TummiEntry(date: Date(), snapshot: WidgetBridge.read() ?? .placeholder))
+    func getSnapshot(in context: Context, completion: @escaping (SpoonletEntry) -> Void) {
+        completion(SpoonletEntry(date: Date(), snapshot: WidgetBridge.read() ?? .placeholder))
     }
 
-    func getTimeline(in context: Context, completion: @escaping (Timeline<TummiEntry>) -> Void) {
+    func getTimeline(in context: Context, completion: @escaping (Timeline<SpoonletEntry>) -> Void) {
         let snapshot = WidgetBridge.read() ?? WidgetSnapshot()
         let now = Date()
 
@@ -54,7 +54,7 @@ struct TummiProvider: TimelineProvider {
         // when "today so far" resets to zero.
         let calendar = Calendar.current
         let midnight = calendar.startOfDay(for: now.addingTimeInterval(86_400))
-        let entries = [TummiEntry(date: now, snapshot: snapshot)]
+        let entries = [SpoonletEntry(date: now, snapshot: snapshot)]
         completion(Timeline(entries: entries, policy: .after(midnight)))
     }
 }
@@ -92,9 +92,9 @@ private struct Bar: View {
     }
 }
 
-struct TummiWidgetView: View {
+struct SpoonletWidgetView: View {
     @Environment(\.widgetFamily) private var family
-    let entry: TummiEntry
+    let entry: SpoonletEntry
 
     var body: some View {
         switch family {
@@ -123,7 +123,7 @@ struct TummiWidgetView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .containerBackground(WTheme.bg, for: .widget)
-        .widgetURL(URL(string: "tummi://log/solid"))
+        .widgetURL(URL(string: "spoonlet://log/solid"))
     }
 
     // MARK: Medium
@@ -132,7 +132,7 @@ struct TummiWidgetView: View {
         HStack(alignment: .top, spacing: 16) {
             // Each half opens the sheet that changes the figure it shows, rather than
             // dumping the parent on the front page to find it themselves.
-            Link(destination: URL(string: "tummi://log/solid")!) {
+            Link(destination: URL(string: "spoonlet://log/solid")!) {
                 VStack(alignment: .leading, spacing: 7) {
                     header
                     Spacer(minLength: 0)
@@ -142,7 +142,7 @@ struct TummiWidgetView: View {
                 .contentShape(Rectangle())
             }
             VStack(alignment: .leading, spacing: 10) {
-                Link(destination: URL(string: "tummi://log/bottle")!) {
+                Link(destination: URL(string: "spoonlet://log/bottle")!) {
                     milkBlock.contentShape(Rectangle())
                 }
                 mealsBlock
@@ -250,10 +250,10 @@ struct TummiWidgetView: View {
     }
 }
 
-struct TummiTodayWidget: Widget {
+struct SpoonletTodayWidget: Widget {
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: WidgetBridge.kind, provider: TummiProvider()) { entry in
-            TummiWidgetView(entry: entry)
+        StaticConfiguration(kind: WidgetBridge.kind, provider: SpoonletProvider()) { entry in
+            SpoonletWidgetView(entry: entry)
         }
         .configurationDisplayName("Today")
         .description("Today's food and milk against the guidance range for your baby's age.")
@@ -262,8 +262,8 @@ struct TummiTodayWidget: Widget {
 }
 
 @main
-struct TummiWidgetBundle: WidgetBundle {
+struct SpoonletWidgetBundle: WidgetBundle {
     var body: some Widget {
-        TummiTodayWidget()
+        SpoonletTodayWidget()
     }
 }

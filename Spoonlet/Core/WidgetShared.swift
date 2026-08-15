@@ -42,8 +42,8 @@ struct WidgetSnapshot: Codable, Hashable {
 }
 
 enum WidgetBridge {
-    static let appGroup = "group.com.antonpenkov.tummi"
-    static let kind = "TummiTodayWidget"
+    static let appGroup = "group.com.antonpenkov.spoonlet"
+    static let kind = "SpoonletTodayWidget"
 
     private static var fileURL: URL? {
         FileManager.default

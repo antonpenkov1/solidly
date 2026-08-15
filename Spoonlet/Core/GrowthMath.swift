@@ -106,7 +106,7 @@ enum GrowthMath {
             .map { (Double($0.month), value(atZ: zValue, lms: $0)) }
     }
 
-    /// How a z-score reads clinically. WHO flags start at ±2 SD; Tummi phrases them as
+    /// How a z-score reads clinically. WHO flags start at ±2 SD; Spoonlet phrases them as
     /// "worth mentioning to your doctor", never as a diagnosis.
     enum Band: Hashable {
         case low        // below -2 SD

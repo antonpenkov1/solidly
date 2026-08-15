@@ -271,14 +271,14 @@ enum Persistence {
     static var storeURL: URL {
         let support = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
         try? FileManager.default.createDirectory(at: support, withIntermediateDirectories: true)
-        return support.appendingPathComponent("Tummi.store")
+        return support.appendingPathComponent("Spoonlet.store")
     }
 
     /// iCloud sync is written but switched off.
     ///
     /// Every model here is already CloudKit-safe — no unique attributes, every property
     /// defaulted — so turning it on is this flag plus the two entitlement keys noted in
-    /// `Tummi.entitlements`. It stays off until the CloudKit container actually exists in
+    /// `Spoonlet.entitlements`. It stays off until the CloudKit container actually exists in
     /// the developer account, because an entitlement pointing at a missing container fails
     /// provisioning rather than degrading quietly.
     ///
@@ -292,7 +292,7 @@ enum Persistence {
         } else if iCloudSyncEnabled {
             configuration = ModelConfiguration(
                 schema: schema, url: storeURL,
-                cloudKitDatabase: .private("iCloud.com.antonpenkov.tummi")
+                cloudKitDatabase: .private("iCloud.com.antonpenkov.spoonlet")
             )
         } else {
             configuration = ModelConfiguration(schema: schema, url: storeURL)

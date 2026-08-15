@@ -21,9 +21,9 @@ import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-BUNDLE = "com.antonpenkov.tummi"
+BUNDLE = "com.antonpenkov.spoonlet"
 
-# App Store Connect wants one slot per device class the app claims. Tummi claims iPhone and
+# App Store Connect wants one slot per device class the app claims. Spoonlet claims iPhone and
 # iPad, so both sets have to exist or the version cannot be submitted.
 DEVICES = {
     "iphone": ("iPhone 17 Pro Max", (1320, 2868)),
@@ -66,13 +66,13 @@ def device_udid(name: str) -> str:
 def build(device: str) -> str:
     print("building…")
     subprocess.run([
-        "xcodebuild", "-project", str(ROOT / "Tummi.xcodeproj"), "-scheme", "Tummi",
+        "xcodebuild", "-project", str(ROOT / "Spoonlet.xcodeproj"), "-scheme", "Spoonlet",
         "-destination", f"platform=iOS Simulator,name={device}",
         "-configuration", "Debug", "build",
     ], check=True, capture_output=True, text=True)
 
     settings = subprocess.run([
-        "xcodebuild", "-project", str(ROOT / "Tummi.xcodeproj"), "-scheme", "Tummi",
+        "xcodebuild", "-project", str(ROOT / "Spoonlet.xcodeproj"), "-scheme", "Spoonlet",
         "-destination", f"platform=iOS Simulator,name={device}",
         "-configuration", "Debug", "-showBuildSettings",
     ], check=True, capture_output=True, text=True).stdout

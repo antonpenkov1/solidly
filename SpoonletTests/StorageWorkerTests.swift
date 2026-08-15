@@ -1,5 +1,5 @@
 import XCTest
-@testable import Tummi
+@testable import Spoonlet
 
 final class StorageWorkerTests: XCTestCase {
     private var worker: StorageWorker!

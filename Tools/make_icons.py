@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Draws FLAT candidate app icons and a contact sheet at real home-screen size.
 
-Superseded for the shipping icon: Tummi now ships a layered Liquid Glass icon built by
+Superseded for the shipping icon: Spoonlet now ships a layered Liquid Glass icon built by
 Tools/make_glass_icon.py, because a flat PNG is passed through untouched on iOS 26. This
 script is kept for exploring silhouettes quickly, and because the launch-screen mark is
 still a flat image and is generated here (--launch).
@@ -235,7 +235,7 @@ def launch_mark():
 
 
 def write_launch_mark():
-    target = ROOT / "Tummi" / "Assets.xcassets" / "LaunchMark.imageset"
+    target = ROOT / "Spoonlet" / "Assets.xcassets" / "LaunchMark.imageset"
     mark = launch_mark()
     base = 180
     for scale, suffix in [(1, ""), (2, "@2x"), (3, "@3x")]:
@@ -256,7 +256,7 @@ def main() -> int:
         for letter, fn in VARIANTS:
             if letter == wanted:
                 img, name = fn()
-                target = ROOT / "Tummi" / "Assets.xcassets" / "AppIcon.appiconset" / "icon-1024.png"
+                target = ROOT / "Spoonlet" / "Assets.xcassets" / "AppIcon.appiconset" / "icon-1024.png"
                 raise SystemExit(
                     f"variant {letter} ({name}) is a flat icon, and the app icon is now the "
                     "layered AppIcon.icon — use:\n"

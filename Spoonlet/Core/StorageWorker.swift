@@ -16,7 +16,7 @@ final class StorageWorker {
     }
 
     private func commit() {
-        do { try context.save() } catch { assertionFailure("Tummi save failed: \(error)") }
+        do { try context.save() } catch { assertionFailure("Spoonlet save failed: \(error)") }
     }
 
     private func fetch<T: PersistentModel>(_ descriptor: FetchDescriptor<T>) -> [T] {
@@ -363,7 +363,7 @@ final class StorageWorker {
 
     // MARK: - Export
 
-    /// Everything Tummi holds for a child, as JSON. Used by Settings → Export and by the
+    /// Everything Spoonlet holds for a child, as JSON. Used by Settings → Export and by the
     /// "show my paediatrician" flow. Nothing ever leaves the device unless a parent shares it.
     func exportJSON(childId: UUID) -> Data? {
         struct Export: Encodable {

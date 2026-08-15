@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerates Tummi/Core/WHOStandards.swift from the WHO Child Growth Standards.
+"""Regenerates Spoonlet/Core/WHOStandards.swift from the WHO Child Growth Standards.
 
 Downloads the published z-score spreadsheets from who.int and writes the L, M and S
 parameters for months 0-24 as Swift literals. Those tables carry LMS directly, so nothing
@@ -113,7 +113,7 @@ def main() -> int:
     }
 }""")
 
-    out = Path(__file__).resolve().parent.parent / "Tummi" / "Core" / "WHOStandards.swift"
+    out = Path(__file__).resolve().parent.parent / "Spoonlet" / "Core" / "WHOStandards.swift"
     out.write_text("\n".join(lines) + "\n")
     print(f"wrote {out}")
     return 0

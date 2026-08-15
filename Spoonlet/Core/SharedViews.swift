@@ -69,7 +69,7 @@ struct FlowLayout: Layout {
 
 /// The citation row that appears under every claim in the app.
 ///
-/// Tapping opens the source. This is the whole premise of Tummi, so it is a shared
+/// Tapping opens the source. This is the whole premise of Spoonlet, so it is a shared
 /// component rather than something each scene re-implements — if a card has no sources,
 /// it should not be making a claim.
 struct SourceChipsRow: View {

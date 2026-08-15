@@ -40,7 +40,7 @@ enum FoodGroup: String, CaseIterable, Hashable, Codable {
     }
 }
 
-/// The "top 9" allergens tracked by regulators in the US and EU. Tummi tracks exposure
+/// The "top 9" allergens tracked by regulators in the US and EU. Spoonlet tracks exposure
 /// counts per allergen because repeated, regular exposure — not a single taste — is what
 /// the prevention trials actually studied.
 enum Allergen: String, CaseIterable, Hashable, Codable {

@@ -9,7 +9,7 @@ Everything below is ready to paste. Character limits are noted and respected.
 **Spoonlet**
 
 The first choice, `Spoonlet`, was rejected by App Store Connect as already in use — and the app
-holding it is [Spoonlet – Start Solid Foods](https://apps.apple.com/us/app/tummi-start-solid-foods/id6754228611),
+holding it is [Spoonlet – Start Solid Foods](https://apps.apple.com/us/app/spoonlet-start-solid-foods/id6754228611),
 a direct competitor in exactly this category. Suffixing it (`Spoonlet: Baby Feeding`) would have
 parked the listing next to that competitor, fed it search traffic, and invited a 4.1 copycat
 rejection. So the name changed outright.
@@ -263,9 +263,9 @@ python3 Tools/preflight.py        # must print "Nothing blocking"
 
 Then, in order:
 
-1. **Bundle IDs — already done.** Xcode registered both `com.antonpenkov.tummi` and
-   `com.antonpenkov.tummi.widget` under team 3UHRLQ9522 while archiving, and put
-   `group.com.antonpenkov.tummi` on both. Verify any time with:
+1. **Bundle IDs — already done.** Xcode registered both `com.antonpenkov.spoonlet` and
+   `com.antonpenkov.spoonlet.widget` under team 3UHRLQ9522 while archiving, and put
+   `group.com.antonpenkov.spoonlet` on both. Verify any time with:
 
    ```sh
    security cms -D -i ~/Library/Developer/Xcode/UserData/Provisioning\ Profiles/*.mobileprovision \
@@ -278,7 +278,7 @@ Then, in order:
    entitlement has to be on both or the widget resolves a nil container and silently shows
    a placeholder.
 2. **Create the app record** — App Store Connect → Apps → +. Name `Spoonlet`, primary language
-   English (U.S.), bundle ID `com.antonpenkov.tummi`, SKU anything (`tummi-1`).
+   English (U.S.), bundle ID `com.antonpenkov.spoonlet`, SKU anything (`spoonlet-1`).
 3. **Upload the build** — Xcode → Window → Organizer → select the archive → Distribute App →
    App Store Connect → Upload. Xcode creates the distribution certificate and the App Store
    provisioning profiles on the way; there is currently only an *Apple Development*

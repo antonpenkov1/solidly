@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// Tummi's design system: warm oat paper, deep cocoa ink, a single sage accent.
+/// Spoonlet's design system: warm oat paper, deep cocoa ink, a single sage accent.
 /// Deliberately calm rather than nursery-pastel — the app carries clinical guidance,
 /// and pastel candy colours undercut that. Amber marks allergens, clay marks cautions.
 /// Every colour has a light and dark variant through a UIColor dynamic provider so
@@ -151,7 +151,7 @@ struct Chip: View {
 }
 
 /// A dismissible keyboard bar. The native `ToolbarItemGroup(placement: .keyboard)`
-/// silently stops appearing inside a TabView, so Tummi drives its own bar off the
+/// silently stops appearing inside a TabView, so Spoonlet drives its own bar off the
 /// keyboard notifications — the same fix Jarz needed.
 struct KeyboardDoneBar: ViewModifier {
     @State private var visible = false

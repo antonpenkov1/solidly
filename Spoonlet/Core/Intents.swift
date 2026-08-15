@@ -137,7 +137,7 @@ struct TodayIntakeIntent: AppIntent {
     }
 }
 
-struct TummiShortcuts: AppShortcutsProvider {
+struct SpoonletShortcuts: AppShortcutsProvider {
     static var appShortcuts: [AppShortcut] {
         AppShortcut(
             intent: LogBottleIntent(),

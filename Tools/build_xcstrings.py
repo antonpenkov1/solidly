@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Builds Tummi/Localizable.xcstrings from the English source strings plus the Russian map below.
+"""Builds Spoonlet/Localizable.xcstrings from the English source strings plus the Russian map below.
 
 Run after `xcodebuild -exportLocalizations` has produced a fresh key list:
 
-    xcodebuild -project Tummi.xcodeproj -scheme Tummi \
-        -exportLocalizations -localizationPath /tmp/tummi_loc -exportLanguage ru
-    python3 Tools/build_xcstrings.py /tmp/tummi_loc/ru.xcloc/Localized\\ Contents/ru.xliff
+    xcodebuild -project Spoonlet.xcodeproj -scheme Spoonlet \
+        -exportLocalizations -localizationPath /tmp/spoonlet_loc -exportLanguage ru
+    python3 Tools/build_xcstrings.py /tmp/spoonlet_loc/ru.xcloc/Localized\\ Contents/ru.xliff
 
 Keys with no Russian entry are written untranslated ("new"), so a build after adding UI copy
 tells you exactly what is missing instead of silently shipping English.
@@ -537,11 +537,11 @@ def build(keys: list[str]) -> tuple[dict, list[str]]:
 
 def main() -> int:
     xliff = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(
-        "/tmp/tummi_loc/ru.xcloc/Localized Contents/ru.xliff")
+        "/tmp/spoonlet_loc/ru.xcloc/Localized Contents/ru.xliff")
     keys = source_keys(xliff)
     catalogue, missing = build(keys)
 
-    out = Path(__file__).resolve().parent.parent / "Tummi" / "Localizable.xcstrings"
+    out = Path(__file__).resolve().parent.parent / "Spoonlet" / "Localizable.xcstrings"
     out.write_text(json.dumps(catalogue, ensure_ascii=False, indent=2, sort_keys=True) + "\n")
 
     print(f"wrote {out} — {len(keys)} keys, {len(missing)} untranslated")

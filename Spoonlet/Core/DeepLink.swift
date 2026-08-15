@@ -1,7 +1,7 @@
 import Foundation
 import SwiftUI
 
-/// Routing for `tummi://` URLs, which today come from the widget.
+/// Routing for `spoonlet://` URLs, which today come from the widget.
 ///
 /// A widget that only opens the app to its front page wastes the tap. Tapping the food
 /// figure should land on the sheet that changes that figure.
@@ -15,7 +15,7 @@ final class DeepLink: ObservableObject {
 
     @discardableResult
     func handle(_ url: URL) -> Bool {
-        guard url.scheme == "tummi" else { return false }
+        guard url.scheme == "spoonlet" else { return false }
 
         switch url.host {
         case "log":

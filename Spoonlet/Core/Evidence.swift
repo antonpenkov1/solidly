@@ -59,7 +59,7 @@ struct EvidenceSource: Identifiable, Hashable {
     var citation: String { "\(abbreviation), \(year)" }
 }
 
-/// Every recommendation surface in Tummi carries source ids that resolve here.
+/// Every recommendation surface in Spoonlet carries source ids that resolve here.
 /// Nothing is asserted in the UI without a row in this table.
 enum Evidence {
     static let all: [EvidenceSource] = [

@@ -1,4 +1,4 @@
-name: Tummi
+name: Spoonlet
 options:
   bundleIdPrefix: com.antonpenkov
   developmentLanguage: en
@@ -8,32 +8,32 @@ settings:
   base:
     SWIFT_EMIT_LOC_STRINGS: YES
 schemes:
-  Tummi:
+  Spoonlet:
     build:
       targets:
-        Tummi: all
+        Spoonlet: all
     run:
       config: Debug
     test:
       config: Debug
       targets:
-        - TummiTests
-        - TummiUITests
+        - SpoonletTests
+        - SpoonletUITests
     archive:
       config: Release
 targets:
-  Tummi:
+  Spoonlet:
     type: application
     platform: iOS
     sources:
-      - Tummi
+      - Spoonlet
       # Liquid Glass icon (iOS 26+). The icon compiler also derives the legacy flat sizes
       # from these layers, so AppIcon.appiconset is gone rather than duplicated.
       - path: AppIcon.icon
     dependencies:
-      - target: TummiWidget
+      - target: SpoonletWidget
     info:
-      path: Tummi/Info.plist
+      path: Spoonlet/Info.plist
       properties:
         CFBundleDisplayName: Spoonlet
         CFBundleShortVersionString: $(MARKETING_VERSION)
@@ -61,31 +61,31 @@ targets:
         UIApplicationSceneManifest:
           UIApplicationSupportsMultipleScenes: false
         CFBundleURLTypes:
-          - CFBundleURLName: com.antonpenkov.tummi
+          - CFBundleURLName: com.antonpenkov.spoonlet
             CFBundleURLSchemes:
-              - tummi
+              - spoonlet
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.antonpenkov.tummi
+        PRODUCT_BUNDLE_IDENTIFIER: com.antonpenkov.spoonlet
         CODE_SIGN_STYLE: Automatic
         DEVELOPMENT_TEAM: 3UHRLQ9522
-        CODE_SIGN_ENTITLEMENTS: Tummi/Tummi.entitlements
+        CODE_SIGN_ENTITLEMENTS: Spoonlet/Spoonlet.entitlements
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         TARGETED_DEVICE_FAMILY: "1,2"
         SWIFT_VERSION: "5.9"
         CURRENT_PROJECT_VERSION: 1
         MARKETING_VERSION: 1.0
-  TummiWidget:
+  SpoonletWidget:
     type: app-extension
     platform: iOS
     sources:
-      - path: TummiWidget
-      - path: Tummi/Core/WidgetShared.swift
+      - path: SpoonletWidget
+      - path: Spoonlet/Core/WidgetShared.swift
       # An extension looks strings up in its own bundle, so the catalogue is compiled into
       # both targets rather than duplicated as a second file to keep in step.
-      - path: Tummi/Localizable.xcstrings
+      - path: Spoonlet/Localizable.xcstrings
     info:
-      path: TummiWidget/Info.plist
+      path: SpoonletWidget/Info.plist
       properties:
         CFBundleDisplayName: Spoonlet
         CFBundleShortVersionString: $(MARKETING_VERSION)
@@ -94,37 +94,37 @@ targets:
           NSExtensionPointIdentifier: com.apple.widgetkit-extension
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.antonpenkov.tummi.widget
+        PRODUCT_BUNDLE_IDENTIFIER: com.antonpenkov.spoonlet.widget
         CODE_SIGN_STYLE: Automatic
         DEVELOPMENT_TEAM: 3UHRLQ9522
-        CODE_SIGN_ENTITLEMENTS: TummiWidget/TummiWidget.entitlements
+        CODE_SIGN_ENTITLEMENTS: SpoonletWidget/SpoonletWidget.entitlements
         TARGETED_DEVICE_FAMILY: "1,2"
         SWIFT_VERSION: "5.9"
         CURRENT_PROJECT_VERSION: 1
         MARKETING_VERSION: 1.0
         SKIP_INSTALL: YES
-  TummiTests:
+  SpoonletTests:
     type: bundle.unit-test
     platform: iOS
     sources:
-      - path: TummiTests
+      - path: SpoonletTests
     dependencies:
-      - target: Tummi
+      - target: Spoonlet
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.antonpenkov.tummi.tests
+        PRODUCT_BUNDLE_IDENTIFIER: com.antonpenkov.spoonlet.tests
         GENERATE_INFOPLIST_FILE: YES
         SWIFT_VERSION: "5.9"
-  TummiUITests:
+  SpoonletUITests:
     type: bundle.ui-testing
     platform: iOS
     sources:
-      - path: TummiUITests
+      - path: SpoonletUITests
     dependencies:
-      - target: Tummi
+      - target: Spoonlet
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.antonpenkov.tummi.uitests
+        PRODUCT_BUNDLE_IDENTIFIER: com.antonpenkov.spoonlet.uitests
         GENERATE_INFOPLIST_FILE: YES
         SWIFT_VERSION: "5.9"
-        TEST_TARGET_NAME: Tummi
+        TEST_TARGET_NAME: Spoonlet
