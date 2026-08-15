@@ -116,10 +116,11 @@ requests (HTTP 403) but open normally in a browser, which is where the app sends
 
 ## Localization
 
-UI chrome goes through `String(localized:)` and `Localizable.xcstrings` (268 keys, English source
-+ Russian, with plural variations for count strings). Content — food names, serving instructions,
-guidance copy — ships as `LocalizedText(en, ru)` data instead, because the food library is meant to
-grow and a curator adding a food should not have to touch the string catalogue.
+UI chrome goes through `String(localized:)` and `Localizable.xcstrings` (310 keys, English source
++ Russian, with plural variations for count strings). The catalogue is compiled into the widget
+target too, because an extension resolves strings against its own bundle. Content — food names,
+serving instructions, guidance copy — ships as `LocalizedText(en, ru)` data instead, because the
+food library is meant to grow and a curator adding a food should not have to touch the catalogue.
 
 To add UI copy: write the English literal, then
 
@@ -180,7 +181,6 @@ Privacy answers and `docs/privacy.html`, which is noted in both places.
 - Sleep tracking is a single start/stop with no analysis; nappy tracking has no trends.
 - Food library covers 168 foods; Solid Starts carries 400+.
 - Growth charts stop at 24 months (WHO length-for-age is published 0–2 and 2–5 separately).
-- No GitHub repo or GitHub Pages yet, so the privacy-policy URL in `AppStore/metadata.md` is not
-  live — that is a submission blocker.
-- Widget and Siri copy is English-only; those strings need a pass through
-  `Tools/build_xcstrings.py`.
+- Nothing has been submitted to App Store Connect: the app record, the upload and the metadata
+  paste are still to do (`AppStore/metadata.md` has everything ready to paste).
+- The widget has been built and its snapshot verified, but not exercised on a real home screen.
