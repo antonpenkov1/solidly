@@ -49,6 +49,7 @@ struct FoodPickerSheet: View {
                         }
                     }
                     .padding(Theme.gutter)
+                    .readableWidth()
                 }
             }
             .searchable(text: $query, prompt: String(localized: "Search foods"))

@@ -3,7 +3,7 @@
 An iOS infant-feeding app that shows its work: every recommendation names the guideline or
 trial it comes from, and every number can be replaced by the one your own paediatrician gave you.
 
-SwiftUI + Clean Swift (VIP), SwiftData, iOS 17+. English and Russian.
+SwiftUI + Clean Swift (VIP), SwiftData, iOS 17+, iPhone and iPad. English and Russian.
 
 ## Why this and not another baby tracker
 
@@ -199,6 +199,28 @@ Two things worth knowing if you touch it:
 
 `Tools/make_icons.py` still draws flat silhouettes for quickly comparing shapes at
 home-screen size, and generates the launch-screen mark (`--launch`), which is a flat image.
+
+## iPad
+
+The app claims iPad, so it has to earn it. Two things make the difference between a real
+iPad app and a stretched phone:
+
+- `readableWidth()` caps the content column at 700pt and centres it. Full-width cards ran
+  body text past 150 characters on a 13" iPad, roughly twice a comfortable measure.
+- iPad gets all four orientations (`UISupportedInterfaceOrientations~ipad`). A tablet locked
+  to portrait feels broken, and multitasking expects rotation.
+
+Both device screenshot sets are required at submission:
+
+```sh
+python3 Tools/screenshots.py                # iPhone 6.9", 1320 x 2868
+python3 Tools/screenshots.py --device ipad  # iPad 13",   2064 x 2752
+```
+
+The script shuts the simulator down before booting it, because a simulator remembers the
+orientation it was left in and `simctl` cannot set it — an iPad left in landscape produces
+sideways content inside a correctly-sized portrait buffer. The verifier checks for that too,
+since the file dimensions alone look fine.
 
 ## Extensions and system integration
 

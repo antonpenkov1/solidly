@@ -299,6 +299,7 @@ struct EvidenceLibraryView: View {
                 }
                 .padding(Theme.gutter)
                 .padding(.bottom, 30)
+                .readableWidth()
             }
         }
         .navigationTitle(String(localized: "Sources"))

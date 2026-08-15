@@ -253,6 +253,7 @@ struct AddMeasurementSheet: View {
                         .buttonStyle(.plain)
                     }
                     .padding(Theme.gutter)
+                    .readableWidth()
                 }
             }
             .navigationTitle(String(localized: "Measurement"))

@@ -219,11 +219,17 @@ metadata untranslated in search.
 
 ## Screenshots
 
-Six per locale, 6.9" (1320 × 2868). Generate with:
+The app claims **both iPhone and iPad**, so both slots must be filled or the version cannot
+be submitted. Six per locale per device:
 
-```sh
-python3 Tools/screenshots.py
-```
+| Slot | Size | Command |
+| --- | --- | --- |
+| iPhone 6.9" | 1320 × 2868 | `python3 Tools/screenshots.py` |
+| iPad 13" | 2064 × 2752 | `python3 Tools/screenshots.py --device ipad` |
+
+Output lands in `AppStore/screenshots/<device>/<locale>/`. The script verifies every file is
+the exact expected size and fails rather than uploading something App Store Connect will
+reject.
 
 Order and captions:
 

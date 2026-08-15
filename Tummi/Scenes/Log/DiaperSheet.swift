@@ -63,6 +63,7 @@ struct DiaperSheet: View {
                     Spacer()
                 }
                 .padding(Theme.gutter)
+                .readableWidth()
             }
             .navigationTitle(String(localized: "Nappy"))
             .navigationBarTitleDisplayMode(.inline)

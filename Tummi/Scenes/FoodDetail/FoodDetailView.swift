@@ -52,6 +52,7 @@ struct FoodDetailView: View {
                 }
                 .padding(Theme.gutter)
                 .padding(.bottom, 30)
+                .readableWidth()
             }
         }
         .navigationBarTitleDisplayMode(.inline)

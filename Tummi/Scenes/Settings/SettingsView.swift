@@ -32,6 +32,7 @@ struct SettingsView: View {
                     }
                     .padding(Theme.gutter)
                     .padding(.bottom, 30)
+                    .readableWidth()
                 }
             }
             .navigationTitle(String(localized: "Settings"))

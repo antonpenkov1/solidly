@@ -58,6 +58,7 @@ struct LogEntrySheet: View {
                         if existing != nil { deleteButton }
                     }
                     .padding(Theme.gutter)
+                    .readableWidth()
                 }
             }
             .navigationTitle(existing == nil ? String(localized: "Log") : String(localized: "Edit"))

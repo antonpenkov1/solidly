@@ -98,6 +98,7 @@ struct OverrideSheet: View {
                         .buttonStyle(.plain)
                     }
                     .padding(Theme.gutter)
+                    .readableWidth()
                 }
             }
             .navigationTitle(title)

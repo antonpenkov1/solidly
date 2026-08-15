@@ -165,6 +165,28 @@ struct MetricTile: View {
     }
 }
 
+/// Caps the content column at a readable measure and centres it.
+///
+/// On an iPad a full-width card runs a line of body text past 150 characters, which is
+/// roughly twice what is comfortable to read — and it makes the app look like a stretched
+/// phone rather than something designed for the screen. On iPhone the cap is wider than the
+/// device, so this does nothing there.
+struct ReadableWidth: ViewModifier {
+    var limit: CGFloat = 700
+
+    func body(content: Content) -> some View {
+        content
+            .frame(maxWidth: limit)
+            .frame(maxWidth: .infinity)
+    }
+}
+
+extension View {
+    func readableWidth(_ limit: CGFloat = 700) -> some View {
+        modifier(ReadableWidth(limit: limit))
+    }
+}
+
 /// Standard framing for a screen: warm background, large serif title, generous gutters.
 struct ScreenScaffold<Content: View, Trailing: View>: View {
     let title: String
@@ -197,6 +219,7 @@ struct ScreenScaffold<Content: View, Trailing: View>: View {
                 }
                 .padding(.horizontal, Theme.gutter)
                 .padding(.bottom, 32)
+                .readableWidth()
             }
         }
     }
