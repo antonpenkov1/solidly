@@ -151,6 +151,24 @@
     },
     "%lld exposures so far. The prevention trials relied on eating it regularly — roughly twice a week — not on a single taste.": {
       "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld exposure so far. The prevention trials relied on eating it regularly — roughly twice a week — not on a single taste."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld exposures so far. The prevention trials relied on eating it regularly — roughly twice a week — not on a single taste."
+                }
+              }
+            }
+          }
+        },
         "ru": {
           "variations": {
             "plural": {
@@ -185,6 +203,24 @@
     },
     "%lld feeds": {
       "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld feed"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld feeds"
+                }
+              }
+            }
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -195,6 +231,24 @@
     },
     "%lld milk feeds": {
       "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld milk feed"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld milk feeds"
+                }
+              }
+            }
+          }
+        },
         "ru": {
           "variations": {
             "plural": {
@@ -239,6 +293,24 @@
     },
     "%lld weeks at birth": {
       "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld week at birth"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld weeks at birth"
+                }
+              }
+            }
+          }
+        },
         "ru": {
           "variations": {
             "plural": {
@@ -359,6 +431,16 @@
       "extractionState": "manual",
       "shouldTranslate": false
     },
+    "148 foods: when each is usually introduced, whether it is an allergen, and exactly how to cut it.": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "148 продуктов: когда каждый обычно вводят, аллерген ли это и как именно резать."
+          }
+        }
+      }
+    },
     "A single measurement is just a number. Add one and Tummi can start showing the curve.": {
       "localizations": {
         "ru": {
@@ -419,12 +501,32 @@
         }
       }
     },
+    "Add a measurement": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить измерение"
+          }
+        }
+      }
+    },
     "Add a weight or a length and Tummi will plot it against the WHO curves for your baby's age and sex.": {
       "localizations": {
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Добавьте вес или длину, и Tummi нанесёт их на кривые ВОЗ для возраста и пола вашего ребёнка."
+          }
+        }
+      }
+    },
+    "Add your baby": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить ребёнка"
           }
         }
       }
@@ -919,6 +1021,16 @@
         }
       }
     },
+    "Every feed, nappy and nap you record shows up here, newest first, grouped by day.": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Все кормления, подгузники и сны появляются здесь — сначала свежие, сгруппированные по дням."
+          }
+        }
+      }
+    },
     "Every recommendation in this app names the guideline or trial it comes from, so you can read it yourself — or take it to your paediatrician and disagree with it.": {
       "localizations": {
         "ru": {
@@ -959,6 +1071,16 @@
         }
       }
     },
+    "Everything you have recorded, newest first. Tap any entry to correct it.": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Всё, что вы записали, сначала свежее. Нажмите на запись, чтобы поправить."
+          }
+        }
+      }
+    },
     "Export as JSON": {
       "localizations": {
         "ru": {
@@ -995,6 +1117,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Сегодня впервые пробуем: %@."
+          }
+        }
+      }
+    },
+    "Five screens. You will mostly live on the first one.": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пять экранов. Жить вы будете в основном на первом."
           }
         }
       }
@@ -1139,6 +1271,16 @@
         }
       }
     },
+    "Got it": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Понятно"
+          }
+        }
+      }
+    },
     "Growth": {
       "localizations": {
         "ru": {
@@ -1195,6 +1337,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "История"
+          }
+        }
+      }
+    },
+    "How Tummi works": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Как устроено Tummi"
           }
         }
       }
@@ -1455,6 +1607,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "Записать бутылочку"
+          }
+        }
+      }
+    },
+    "Log a feed and Tummi will start tracking it against the guidance for this age.": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Запишите кормление, и Tummi начнёт сверять его с рекомендациями для этого возраста."
+          }
+        }
+      }
+    },
+    "Log a feed in two taps and see how the day compares to the range for your baby's age.": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Записать кормление в два касания и увидеть, как день соотносится с нормой для возраста."
           }
         }
       }
@@ -1903,6 +2075,16 @@
         }
       }
     },
+    "Record something": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сделать запись"
+          }
+        }
+      }
+    },
     "Records a bottle feed for the current baby.": {
       "localizations": {
         "ru": {
@@ -2187,6 +2369,16 @@
         }
       }
     },
+    "Tap any source to read it": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Нажмите на источник, чтобы прочитать"
+          }
+        }
+      }
+    },
     "Tap the plus to record a feed, a nappy or a nap.": {
       "localizations": {
         "ru": {
@@ -2223,6 +2415,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "30-й перцентиль означает, что 30 из 100 здоровых детей того же возраста и пола весят меньше. Хороших и плохих цифр здесь нет: ребёнок, стабильно идущий по 15-му, растёт прекрасно, а ребёнок, съехавший с 75-го на 25-й, — повод для разговора, хотя обе цифры выглядят нормально."
+          }
+        }
+      }
+    },
+    "The green chips are links": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Зелёные плашки — это ссылки"
+          }
+        }
+      }
+    },
+    "The little green chips under each card open the guideline or study it came from. That is the whole point of Tummi — nothing here asks you to take its word for it.": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Маленькие зелёные плашки под каждой карточкой открывают гайд или исследование, откуда взята рекомендация. В этом весь смысл Tummi: оно не просит верить на слово."
           }
         }
       }
@@ -2303,6 +2515,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "Еда и молоко за сегодня относительно диапазона для возраста ребёнка."
+          }
+        }
+      }
+    },
+    "Today's guidance is %1$@ meals and about %2$@ of food. Log a feed and Tummi will start tracking against it.": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ориентир на сегодня — %1$@ приёмов пищи и около %2$@ еды. Запишите кормление, и Tummi начнёт сверять."
+          }
+        }
+      }
+    },
+    "Today's guidance is %1$@ milk feeds. Log one and Tummi will start tracking against it.": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ориентир на сегодня — %1$@ молочных кормлений. Запишите одно, и Tummi начнёт сверять."
           }
         }
       }
@@ -2401,6 +2633,16 @@
         }
       }
     },
+    "Tummi needs a date of birth to know which guidance applies.": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tummi нужна дата рождения, чтобы понять, какие рекомендации применять."
+          }
+        }
+      }
+    },
     "Tummi summarises published infant feeding guidance. It is not a medical device, it does not diagnose, and it cannot examine your baby. Always check with your paediatrician before making decisions about feeding, supplements or allergen introduction — and seek urgent care for breathing difficulty, facial swelling, repeated vomiting after a food, or a baby who stops feeding.": {
       "localizations": {
         "ru": {
@@ -2421,6 +2663,16 @@
         }
       }
     },
+    "Under every recommendation you will see something like “WHO, 2023”. Tap it and the actual guideline opens. Nothing in Tummi asks you to take its word for it.": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Под каждой рекомендацией вы увидите что-то вроде «WHO, 2023». Нажмите — откроется сам гайд. Tummi нигде не просит верить на слово."
+          }
+        }
+      }
+    },
     "Units": {
       "localizations": {
         "ru": {
@@ -2437,6 +2689,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Использовать цифру врача"
+          }
+        }
+      }
+    },
+    "Use the buttons above": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Кнопки сверху"
           }
         }
       }
@@ -2565,6 +2827,16 @@
         }
       }
     },
+    "Weight, length and head circumference on the real WHO curves.": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вес, длина и окружность головы на настоящих кривых ВОЗ."
+          }
+        }
+      }
+    },
     "Wet": {
       "localizations": {
         "ru": {
@@ -2601,6 +2873,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Что означает перцентиль"
+          }
+        }
+      }
+    },
+    "What the guidance says at this stage, what is coming next — and where you enter your paediatrician's own numbers.": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Что рекомендации говорят на этом этапе, что будет дальше — и где вписать цифры своего педиатра."
           }
         }
       }

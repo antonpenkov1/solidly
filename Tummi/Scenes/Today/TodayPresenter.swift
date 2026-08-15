@@ -19,8 +19,13 @@ final class TodayPresenter: TodayPresentationLogic {
     func presentToday(response: Today.Load.Response) {
         let units = response.units
 
+        let totals = response.totals
+        let dayEmpty = totals.milkFeeds == 0 && totals.solidMeals == 0 && totals.waterMl == 0
+
         view?.displayToday(viewModel: .init(
             isEmpty: false,
+            isDayEmpty: dayEmpty,
+            dayEmptyMessage: dayEmptyMessage(response),
             childName: response.child.name,
             ageText: ageText(response),
             stageTitle: response.stage.title.text,
@@ -49,6 +54,29 @@ final class TodayPresenter: TodayPresentationLogic {
     }
 
     // MARK: - Pieces
+
+    /// Says what today's ranges will be, without pretending the parent has missed them.
+    private func dayEmptyMessage(_ response: Today.Load.Response) -> String {
+        let units = response.units
+        let targets = response.targets
+
+        if let perMeal = targets.perMealGrams, let meals = targets.mealsPerDay {
+            let dayLow = perMeal.lowerBound * Double(meals.lowerBound)
+            let dayHigh = perMeal.upperBound * Double(meals.upperBound)
+            return String(
+                format: String(localized: "Today's guidance is %1$@ meals and about %2$@ of food. Log a feed and Tummi will start tracking against it."),
+                Fmt.intRange(meals),
+                Fmt.range(dayLow...dayHigh, units: units, unit: .g)
+            )
+        }
+        if let feeds = targets.milkFeedsPerDay {
+            return String(
+                format: String(localized: "Today's guidance is %1$@ milk feeds. Log one and Tummi will start tracking against it."),
+                Fmt.intRange(feeds)
+            )
+        }
+        return String(localized: "Log a feed and Tummi will start tracking it against the guidance for this age.")
+    }
 
     private func ageText(_ response: Today.Load.Response) -> String {
         let age = Fmt.age(days: response.child.correctedAgeDays(on: response.date))

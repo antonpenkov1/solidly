@@ -418,10 +418,61 @@ RU = {
     "Open Tummi to get started": "Откройте Tummi, чтобы начать",
     "Today's food and milk against the guidance range for your baby's age.":
         "Еда и молоко за сегодня относительно диапазона для возраста ребёнка.",
+
+    # --- Onboarding tour -------------------------------------------------------
+    "How Tummi works": "Как устроено Tummi",
+    "Five screens. You will mostly live on the first one.":
+        "Пять экранов. Жить вы будете в основном на первом.",
+    "Log a feed in two taps and see how the day compares to the range for your baby's age.":
+        "Записать кормление в два касания и увидеть, как день соотносится с нормой для возраста.",
+    "Everything you have recorded, newest first. Tap any entry to correct it.":
+        "Всё, что вы записали, сначала свежее. Нажмите на запись, чтобы поправить.",
+    "148 foods: when each is usually introduced, whether it is an allergen, and exactly how to cut it.":
+        "148 продуктов: когда каждый обычно вводят, аллерген ли это и как именно резать.",
+    "What the guidance says at this stage, what is coming next — and where you enter your paediatrician's own numbers.":
+        "Что рекомендации говорят на этом этапе, что будет дальше — и где вписать цифры своего педиатра.",
+    "Weight, length and head circumference on the real WHO curves.":
+        "Вес, длина и окружность головы на настоящих кривых ВОЗ.",
+    "The green chips are links": "Зелёные плашки — это ссылки",
+    "Under every recommendation you will see something like “WHO, 2023”. Tap it and the actual guideline opens. Nothing in Tummi asks you to take its word for it.":
+        "Под каждой рекомендацией вы увидите что-то вроде «WHO, 2023». Нажмите — откроется сам гайд. Tummi нигде не просит верить на слово.",
+    "Got it": "Понятно",
+
+    # --- Empty states and first-run hints --------------------------------------
+    "Tap any source to read it": "Нажмите на источник, чтобы прочитать",
+    "The little green chips under each card open the guideline or study it came from. That is the whole point of Tummi — nothing here asks you to take its word for it.":
+        "Маленькие зелёные плашки под каждой карточкой открывают гайд или исследование, откуда взята рекомендация. В этом весь смысл Tummi: оно не просит верить на слово.",
+    "Use the buttons above": "Кнопки сверху",
+    "Today's guidance is %1$@ meals and about %2$@ of food. Log a feed and Tummi will start tracking against it.":
+        "Ориентир на сегодня — %1$@ приёмов пищи и около %2$@ еды. Запишите кормление, и Tummi начнёт сверять.",
+    "Today's guidance is %1$@ milk feeds. Log one and Tummi will start tracking against it.":
+        "Ориентир на сегодня — %1$@ молочных кормлений. Запишите одно, и Tummi начнёт сверять.",
+    "Log a feed and Tummi will start tracking it against the guidance for this age.":
+        "Запишите кормление, и Tummi начнёт сверять его с рекомендациями для этого возраста.",
+    "Record something": "Сделать запись",
+    "Every feed, nappy and nap you record shows up here, newest first, grouped by day.":
+        "Все кормления, подгузники и сны появляются здесь — сначала свежие, сгруппированные по дням.",
+    "Add a measurement": "Добавить измерение",
+    "Add your baby": "Добавить ребёнка",
+    "Tummi needs a date of birth to know which guidance applies.":
+        "Tummi нужна дата рождения, чтобы понять, какие рекомендации применять.",
 }
 
 # Purely structural strings — the English "translation" is the correct Russian one too.
 PASSTHROUGH = {"Tummi", "Series", "0", "—", "/ %@", "%1$@ %2$@", "%1$@ · %2$@"}
+
+# English needs plural variations too, or a baby with one exposure reads "1 exposures".
+# Only single-argument count strings that can legitimately be 1 are listed; the presenters
+# branch on the singular case for the rest.
+EN_PLURALS = {
+    "%lld exposures so far. The prevention trials relied on eating it regularly — roughly twice a week — not on a single taste.": {
+        "one": "%lld exposure so far. The prevention trials relied on eating it regularly — roughly twice a week — not on a single taste.",
+        "other": "%lld exposures so far. The prevention trials relied on eating it regularly — roughly twice a week — not on a single taste.",
+    },
+    "%lld milk feeds": {"one": "%lld milk feed", "other": "%lld milk feeds"},
+    "%lld feeds": {"one": "%lld feed", "other": "%lld feeds"},
+    "%lld weeks at birth": {"one": "%lld week at birth", "other": "%lld weeks at birth"},
+}
 
 
 def source_keys(xliff_path: Path) -> list[str]:
@@ -446,7 +497,14 @@ def build(keys: list[str]) -> tuple[dict, list[str]]:
     strings: dict = {}
     missing: list[str] = []
 
+    # The exporter re-reads the catalogue, so English plural *values* come back as if they
+    # were source keys. They are never looked up at runtime — drop them instead of asking
+    # for a translation of a string that does not exist in the code.
+    plural_values = {text for forms in EN_PLURALS.values() for text in forms.values()}
+
     for key in keys:
+        if key in plural_values and key not in EN_PLURALS:
+            continue
         translation = RU.get(key)
         if translation is None:
             if key in PASSTHROUGH:
@@ -465,7 +523,14 @@ def build(keys: list[str]) -> tuple[dict, list[str]]:
         else:
             ru_entry = unit(translation)
 
-        strings[key] = {"localizations": {"ru": ru_entry}}
+        localizations = {"ru": ru_entry}
+        if key in EN_PLURALS:
+            localizations["en"] = {
+                "variations": {
+                    "plural": {form: unit(text) for form, text in EN_PLURALS[key].items()}
+                }
+            }
+        strings[key] = {"localizations": localizations}
 
     return {"sourceLanguage": "en", "strings": strings, "version": "1.0"}, missing
 

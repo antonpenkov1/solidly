@@ -53,6 +53,11 @@ enum Today {
             }
 
             let isEmpty: Bool
+            /// Nothing logged today at all. The metric bars are hidden in that case: three
+            /// zeros under three empty bars reads as three failed targets before the parent
+            /// has done anything, which is the opposite of what the ranges are for.
+            let isDayEmpty: Bool
+            let dayEmptyMessage: String
             let childName: String
             let ageText: String
             let stageTitle: String
@@ -79,7 +84,8 @@ enum Today {
             let milestoneWhen: String?
 
             static let empty = ViewModel(
-                isEmpty: true, childName: "", ageText: "", stageTitle: "", stageRange: "",
+                isEmpty: true, isDayEmpty: true, dayEmptyMessage: "",
+                childName: "", ageText: "", stageTitle: "", stageRange: "",
                 headline: "", metrics: [], overrideNote: nil,
                 focusTitle: "", focusBody: "", focusSources: [],
                 allergenTitle: nil, allergenDetail: nil, newFoodNote: nil,

@@ -40,12 +40,26 @@ struct OnboardingView: View {
     var body: some View {
         ZStack {
             Theme.bg.ignoresSafeArea()
-            TabView(selection: $page) {
-                welcome.tag(0)
-                childForm.tag(1)
-                disclaimer.tag(2)
+            VStack(spacing: 0) {
+                TabView(selection: $page) {
+                    welcome.tag(0)
+                    childForm.tag(1)
+                    tour.tag(2)
+                    disclaimer.tag(3)
+                }
+                .tabViewStyle(.page(indexDisplayMode: .never))
+
+                // Four unlabelled swipes with no sense of progress is its own small anxiety.
+                HStack(spacing: 7) {
+                    ForEach(0..<4, id: \.self) { index in
+                        Capsule()
+                            .fill(index == page ? Theme.accent : Theme.hairline)
+                            .frame(width: index == page ? 20 : 7, height: 7)
+                            .animation(.easeOut(duration: 0.2), value: page)
+                    }
+                }
+                .padding(.bottom, 14)
             }
-            .tabViewStyle(.page(indexDisplayMode: .never))
         }
         .keyboardDoneButton()
         .onChange(of: store.didSave) { _, saved in
@@ -151,6 +165,82 @@ struct OnboardingView: View {
         .onChange(of: isPreterm) { _, preterm in
             gestationWeeks = preterm ? 34 : 40
         }
+    }
+
+    /// The five tabs, in one screen. Without this a new user meets five unlabelled ideas at
+    /// once and has to reverse-engineer what the app is for from an empty Today screen.
+    private var tour: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 18) {
+                Text("How Tummi works")
+                    .font(Theme.serif(32, .semibold))
+                    .foregroundStyle(Theme.ink)
+                Text("Five screens. You will mostly live on the first one.")
+                    .font(.system(size: 15))
+                    .foregroundStyle(Theme.secondary)
+
+                VStack(spacing: 0) {
+                    tourRow("sun.max", String(localized: "Today"),
+                            String(localized: "Log a feed in two taps and see how the day compares to the range for your baby's age."))
+                    Hairline()
+                    tourRow("list.bullet", String(localized: "Log"),
+                            String(localized: "Everything you have recorded, newest first. Tap any entry to correct it."))
+                    Hairline()
+                    tourRow("carrot", String(localized: "Foods"),
+                            String(localized: "148 foods: when each is usually introduced, whether it is an allergen, and exactly how to cut it."))
+                    Hairline()
+                    tourRow("checklist", String(localized: "Plan"),
+                            String(localized: "What the guidance says at this stage, what is coming next — and where you enter your paediatrician's own numbers."))
+                    Hairline()
+                    tourRow("chart.xyaxis.line", String(localized: "Growth"),
+                            String(localized: "Weight, length and head circumference on the real WHO curves."))
+                }
+                .cardStyle(padding: 0)
+
+                HStack(alignment: .top, spacing: 11) {
+                    Image(systemName: "text.book.closed")
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundStyle(Theme.accent)
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text("The green chips are links")
+                            .font(Theme.rounded(15, .semibold))
+                            .foregroundStyle(Theme.ink)
+                        Text("Under every recommendation you will see something like “WHO, 2023”. Tap it and the actual guideline opens. Nothing in Tummi asks you to take its word for it.")
+                            .font(.system(size: 13))
+                            .foregroundStyle(Theme.secondary)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+                .padding(14)
+                .background(RoundedRectangle(cornerRadius: 16, style: .continuous)
+                    .fill(Theme.accentSoft))
+
+                primaryButton(String(localized: "Got it")) { page = 3 }
+                    .padding(.top, 4)
+            }
+            .padding(28)
+        }
+    }
+
+    private func tourRow(_ symbol: String, _ title: String, _ detail: String) -> some View {
+        HStack(alignment: .top, spacing: 13) {
+            Image(systemName: symbol)
+                .font(.system(size: 16, weight: .medium))
+                .foregroundStyle(Theme.accent)
+                .frame(width: 26)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title)
+                    .font(Theme.rounded(15, .semibold))
+                    .foregroundStyle(Theme.ink)
+                Text(detail)
+                    .font(.system(size: 13))
+                    .foregroundStyle(Theme.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            Spacer(minLength: 0)
+        }
+        .padding(.horizontal, 14)
+        .padding(.vertical, 13)
     }
 
     private var disclaimer: some View {

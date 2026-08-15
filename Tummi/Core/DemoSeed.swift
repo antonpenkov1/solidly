@@ -27,6 +27,10 @@ enum DemoSeed {
         settings.disclaimerAcceptedAt = Date()
         worker.save(settings: settings)
 
+        // `-DemoEmpty 1` stops here: a child who exists but has logged nothing, which is what
+        // every real user sees on their first day and what demo data hides.
+        guard !arguments.contains("-DemoEmpty") else { return }
+
         seedGrowth(child: child, worker: worker, calendar: calendar, today: today)
         seedHistory(child: child, worker: worker, calendar: calendar, today: today)
 

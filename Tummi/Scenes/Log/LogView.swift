@@ -37,7 +37,9 @@ struct LogView: View {
                 EmptyStateView(
                     symbol: "list.bullet",
                     title: String(localized: "Nothing logged yet"),
-                    message: String(localized: "Tap the plus to record a feed, a nappy or a nap.")
+                    message: String(localized: "Every feed, nappy and nap you record shows up here, newest first, grouped by day."),
+                    actionTitle: String(localized: "Record something"),
+                    action: { showsNewEntry = true }
                 )
             } else {
                 ForEach(model.sections) { section in

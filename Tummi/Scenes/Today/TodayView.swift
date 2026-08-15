@@ -38,12 +38,25 @@ struct TodayView: View {
                 EmptyStateView(
                     symbol: "sun.max",
                     title: String(localized: "No child yet"),
-                    message: String(localized: "Add a baby in Settings to start tracking.")
+                    message: String(localized: "Tummi needs a date of birth to know which guidance applies."),
+                    actionTitle: String(localized: "Add your baby"),
+                    actionSymbol: "person.crop.circle.badge.plus",
+                    action: { showsSettings = true }
                 )
             } else {
                 stageCard(model)
                 quickActions
-                if !model.metrics.isEmpty { metricsCard(model) }
+                if model.isDayEmpty {
+                    dayEmptyCard(model)
+                } else if !model.metrics.isEmpty {
+                    metricsCard(model)
+                }
+                FirstRunHint(
+                    storageKey: "hint.citations",
+                    symbol: "hand.tap",
+                    title: String(localized: "Tap any source to read it"),
+                    message: String(localized: "The little green chips under each card open the guideline or study it came from. That is the whole point of Tummi — nothing here asks you to take its word for it.")
+                )
                 if let note = model.newFoodNote { newFoodBanner(note) }
                 allergenCard(model)
                 EvidenceCard(
@@ -144,6 +157,27 @@ struct TodayView: View {
                 .fill(Theme.accentSoft))
         }
         .buttonStyle(.plain)
+    }
+
+    private func dayEmptyCard(_ model: Today.Load.ViewModel) -> some View {
+        VStack(alignment: .leading, spacing: 10) {
+            SectionLabel("Today so far")
+            Text("Nothing logged yet today.")
+                .font(Theme.serif(20, .regular))
+                .foregroundStyle(Theme.ink)
+            Text(model.dayEmptyMessage)
+                .font(.system(size: 14))
+                .foregroundStyle(Theme.secondary)
+                .fixedSize(horizontal: false, vertical: true)
+            HStack(spacing: 6) {
+                Image(systemName: "arrow.up")
+                    .font(.system(size: 11, weight: .bold))
+                Text("Use the buttons above")
+                    .font(Theme.rounded(12, .semibold))
+            }
+            .foregroundStyle(Theme.accent)
+        }
+        .cardStyle()
     }
 
     private func metricsCard(_ model: Today.Load.ViewModel) -> some View {

@@ -244,13 +244,20 @@ struct EvidenceCard: View {
     }
 }
 
+/// An empty screen should carry the action that fills it.
+///
+/// "Tap the plus" pointing at a 24pt target in the opposite corner is an instruction, not an
+/// affordance — the button belongs where the sentence explaining it is.
 struct EmptyStateView: View {
     let symbol: String
     let title: String
     let message: String
+    var actionTitle: String?
+    var actionSymbol: String = "plus"
+    var action: (() -> Void)?
 
     var body: some View {
-        VStack(spacing: 10) {
+        VStack(spacing: 12) {
             Image(systemName: symbol)
                 .font(.system(size: 30, weight: .light))
                 .foregroundStyle(Theme.faint)
@@ -261,8 +268,72 @@ struct EmptyStateView: View {
                 .font(.system(size: 14))
                 .foregroundStyle(Theme.secondary)
                 .multilineTextAlignment(.center)
+            if let actionTitle, let action {
+                Button(action: action) {
+                    Label(actionTitle, systemImage: actionSymbol)
+                        .font(Theme.rounded(16, .semibold))
+                        .padding(.horizontal, 22)
+                        .padding(.vertical, 13)
+                        .background(Capsule().fill(Theme.accent))
+                        .foregroundStyle(Theme.bg)
+                }
+                .buttonStyle(.plain)
+                .padding(.top, 4)
+            }
         }
         .frame(maxWidth: .infinity)
-        .padding(.vertical, 34)
+        .padding(.vertical, 30)
+    }
+}
+
+/// A one-off hint that teaches something the interface cannot say on its own — currently
+/// that citations are tappable, which is the entire premise of the app and otherwise looks
+/// like decoration. Dismissed for good once read.
+struct FirstRunHint: View {
+    let storageKey: String
+    let symbol: String
+    let title: String
+    let message: String
+
+    @AppStorage private var dismissed: Bool
+
+    init(storageKey: String, symbol: String, title: String, message: String) {
+        self.storageKey = storageKey
+        self.symbol = symbol
+        self.title = title
+        self.message = message
+        _dismissed = AppStorage(wrappedValue: false, storageKey)
+    }
+
+    var body: some View {
+        if !dismissed {
+            HStack(alignment: .top, spacing: 11) {
+                Image(systemName: symbol)
+                    .font(.system(size: 15, weight: .semibold))
+                    .foregroundStyle(Theme.accent)
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(title)
+                        .font(Theme.rounded(15, .semibold))
+                        .foregroundStyle(Theme.ink)
+                    Text(message)
+                        .font(.system(size: 13))
+                        .foregroundStyle(Theme.secondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                Spacer(minLength: 0)
+                Button {
+                    withAnimation(.easeOut(duration: 0.2)) { dismissed = true }
+                } label: {
+                    Image(systemName: "xmark")
+                        .font(.system(size: 11, weight: .bold))
+                        .foregroundStyle(Theme.faint)
+                        .padding(6)
+                }
+                .buttonStyle(.plain)
+            }
+            .padding(14)
+            .background(RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .fill(Theme.accentSoft))
+        }
     }
 }
