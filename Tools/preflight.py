@@ -86,12 +86,27 @@ def main() -> int:
           f"{len(dsyms)} dSYM bundles present",
           "missing dSYMs — crash reports will be unreadable")
 
-    for kind, size in [("iphone", (1320, 2868)), ("ipad", (2064, 2752))]:
-        shots = sorted((ROOT / "AppStore" / "screenshots" / kind).rglob("*.png"))
-        check(len(shots) == 12,
-              f"{kind}: 12 screenshots ({size[0]}x{size[1]})",
-              f"{kind}: {len(shots)} screenshots, expected 12 — regenerate with "
-              f"Tools/screenshots.py --device {kind}")
+    # App Store Connect validates the exact pixel size per slot and rejects a shot that is
+    # the wrong one, so each slot needs its own set rather than one set resized.
+    for kind, size in [("iphone", (1320, 2868)),      # 6.9"
+                       ("iphone65", (1284, 2778)),    # 6.5"
+                       ("ipad", (2064, 2752))]:       # 13"
+        folder = ROOT / "AppStore" / "screenshots" / kind
+        shots = sorted(folder.rglob("*.png")) if folder.exists() else []
+        wrong = []
+        try:
+            from PIL import Image
+            for shot in shots:
+                with Image.open(shot) as image:
+                    if image.size != size:
+                        wrong.append(f"{shot.name} {image.size[0]}x{image.size[1]}")
+        except ImportError:
+            pass
+        check(len(shots) == 12 and not wrong,
+              f"{kind}: 12 screenshots at {size[0]}x{size[1]}",
+              f"{kind}: {len(shots)} screenshots"
+              + (f", wrong size: {', '.join(wrong[:2])}" if wrong else "")
+              + f" — regenerate with Tools/screenshots.py --device {kind}")
 
     print("PASSED")
     for line in passed:

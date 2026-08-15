@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Captures the App Store screenshot sets, in both locales.
 
-    python3 Tools/screenshots.py                  # iPhone 6.9", both locales
-    python3 Tools/screenshots.py --device ipad    # iPad 13", both locales
-    python3 Tools/screenshots.py ru               # one locale
+    python3 Tools/screenshots.py                     # iPhone 6.9", both locales
+    python3 Tools/screenshots.py --device iphone65   # iPhone 6.5", both locales
+    python3 Tools/screenshots.py --device ipad       # iPad 13", both locales
+    python3 Tools/screenshots.py ru                  # one locale
 
 Writes AppStore/screenshots/<device>/<locale>/NN-<name>.png and fails loudly if any shot
 is not the exact size App Store Connect expects for that slot. Every shot is driven by a
@@ -23,11 +24,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 BUNDLE = "com.antonpenkov.spoonlet"
 
-# App Store Connect wants one slot per device class the app claims. Spoonlet claims iPhone and
-# iPad, so both sets have to exist or the version cannot be submitted.
+# App Store Connect wants one slot per device class the app claims, and it validates the
+# exact pixel size per slot — a 6.9" shot dropped into the 6.5" slot is rejected outright.
+# Spoonlet claims iPhone and iPad, and App Store Connect still shows a 6.5" iPhone slot, so
+# all three sets are kept.
 DEVICES = {
-    "iphone": ("iPhone 17 Pro Max", (1320, 2868)),
-    "ipad": ("iPad Pro 13-inch (M5)", (2064, 2752)),
+    "iphone": ("iPhone 17 Pro Max", (1320, 2868)),      # 6.9" slot
+    "iphone65": ("iPhone 13 Pro Max", (1284, 2778)),    # 6.5" slot (1242x2688 also accepted)
+    "ipad": ("iPad Pro 13-inch (M5)", (2064, 2752)),    # 13" slot
 }
 
 # (order, name, extra launch arguments)

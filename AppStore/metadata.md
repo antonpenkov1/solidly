@@ -233,7 +233,13 @@ be submitted. Six per locale per device:
 | Slot | Size | Command |
 | --- | --- | --- |
 | iPhone 6.9" | 1320 × 2868 | `python3 Tools/screenshots.py` |
+| iPhone 6.5" | 1284 × 2778 | `python3 Tools/screenshots.py --device iphone65` |
 | iPad 13" | 2064 × 2752 | `python3 Tools/screenshots.py --device ipad` |
+
+App Store Connect validates the pixel size **per slot** and refuses a file that belongs to a
+different one — a 6.9" shot dropped into the 6.5" box is rejected with "The dimensions of one
+or more screenshots are wrong", which is what happened on the first attempt. Upload each
+folder into its matching slot; do not resize one set to fit another.
 
 Output lands in `AppStore/screenshots/<device>/<locale>/`. The script verifies every file is
 the exact expected size and fails rather than uploading something App Store Connect will
