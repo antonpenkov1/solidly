@@ -242,12 +242,55 @@ Order and captions:
 | 5 | Growth | Real WHO curves, read honestly | Настоящие кривые ВОЗ, без интерпретаций |
 | 6 | Sources | Eighteen sources you can read yourself | Восемнадцать источников, которые можно прочитать |
 
+## Upload, step by step
+
+Everything that can be automated is done. What remains needs your Apple ID.
+
+```sh
+xcodegen generate
+xcodebuild -project Tummi.xcodeproj -scheme Tummi -configuration Release \
+  -destination 'generic/platform=iOS' -archivePath build/Tummi.xcarchive archive
+python3 Tools/preflight.py        # must print "Nothing blocking"
+```
+
+Then, in order:
+
+1. **Register the bundle IDs** — developer.apple.com → Identifiers → `com.antonpenkov.tummi`
+   and `com.antonpenkov.tummi.widget`. Enable **App Groups** on both and add
+   `group.com.antonpenkov.tummi`.
+2. **Create the app record** — App Store Connect → Apps → +. Name `Tummi`, primary language
+   English (U.S.), bundle ID `com.antonpenkov.tummi`, SKU anything (`tummi-1`).
+3. **Upload the build** — Xcode → Window → Organizer → select the archive → Distribute App →
+   App Store Connect → Upload. Xcode creates the distribution certificate and the App Store
+   provisioning profiles on the way; there is currently only an *Apple Development*
+   certificate on this Mac, so expect it to ask.
+4. **Wait for processing** (10–40 minutes), then attach the build to version 1.0.
+5. **Paste the metadata above**, for both English and Russian.
+6. **Upload both screenshot sets** — iPhone 6.9" and iPad 13", six each per locale, from
+   `AppStore/screenshots/<device>/<locale>/`.
+7. **App Privacy** → Data Not Collected.
+8. **Age rating** → Medical/Treatment Information: Infrequent/Mild (see above; lands at 12+).
+9. **Paste the review notes**, add the demo walkthrough, submit.
+
 ## Pre-submission checklist
 
-- [ ] GitHub Pages live, privacy URL returns 200
-- [ ] `MARKETING_VERSION` and `CURRENT_PROJECT_VERSION` bumped in `project.yml`
-- [ ] Archive built from a clean `xcodegen generate`
-- [ ] Screenshots uploaded for both locales
+- [x] GitHub Pages live, privacy URL returns 200
+- [x] Release archive builds and passes `Tools/preflight.py`
+- [x] Screenshots captured for both devices and both locales
+- [ ] Bundle IDs registered with App Groups enabled
+- [ ] App record created in App Store Connect
+- [ ] Build uploaded and processed
+- [ ] Metadata pasted for both locales
 - [ ] App Privacy = Data Not Collected
 - [ ] Age rating questionnaire answered as above
 - [ ] Review notes pasted
+
+## Still untested at the time of writing
+
+Worth doing before you submit rather than after:
+
+- The app has **never run on a physical device** — only simulators. Haptics, the real
+  notification permission prompt and actual performance are unverified.
+- The **widget has never been placed on a real home screen**. Its snapshot file was verified
+  end to end, but that is not the same thing.
+- **Nobody with an actual infant has used it.**

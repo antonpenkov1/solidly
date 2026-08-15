@@ -39,6 +39,10 @@ targets:
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         ITSAppUsesNonExemptEncryption: false
+        # Required at the TOP level or App Store Connect rejects the upload with ITMS-90713.
+        # actool writes it only nested inside CFBundleIcons when the icon comes from a
+        # layered .icon bundle, so it has to be stated here.
+        CFBundleIconName: AppIcon
         # A branded launch screen rather than a white flash. The colour asset has a dark
         # variant, so cold start matches the appearance the app is about to draw.
         UILaunchScreen:
