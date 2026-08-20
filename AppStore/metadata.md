@@ -192,6 +192,12 @@ brings 5.1.4 obligations that do not apply and cannot be met by an app that show
 
 ## App Review notes
 
+> Submission 1 was met with a Guideline 2.1 "Information Needed" request. The full reply,
+> covering all seven points Apple asked for plus a shot list for the required physical-device
+> recording, is in `AppStore/review-response.md`. Paste that into the Notes field for every
+> future submission — it pre-empts the same questions.
+
+
 ```
 Spoonlet is an infant-feeding reference and tracker for parents. There is no account, no login and
 no server — the reviewer can use every feature immediately after onboarding.
